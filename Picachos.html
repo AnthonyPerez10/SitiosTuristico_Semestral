@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picachos</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Menu de navegacion-->
+    <header class="site-header">
+        <div class="container header-grid">
+            <a href="index.html" class="logo">Coclé<span class="accent">Tour</span></a>
+
+            <nav class="nav" aria-label="Menú principal">
+                <button id="navToggle" class="hamburger" aria-expanded="false" aria-controls="mainMenu">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
+
+                <ul id="mainMenu" class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="has-dropdown">
+                        <a href="#" aria-haspopup="true">Sitios</a>
+                        <ul class="dropdown">
+                            <li><a href="Picachos.html">Picachos de Olá</a></li>
+                            <li><a href="ParqueOmar.html">Parque Omar Torrijos — El Copé</a></li>
+                            <li><a href="SantaClara.html">Playa Santa Clara</a></li>
+                        </ul>
+                    </li>
+                    <!--<li><a href="Paquetes.html">Paquetes</a></li>-->
+                    <li><a href="Juego.html">Juego</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button id="openChat" class="chat-btn" title="Abrir chat">💬</button>
+                <div class="cart" id="cartWidget" aria-live="polite">
+                    <button id="cartBtn" aria-haspopup="true" aria-expanded="false">🛒 <span
+                            id="cartCount">0</span></button>
+                    <div id="cartDropdown" class="cart-dropdown" aria-hidden="true">
+                        <ul id="cartItems"></ul>
+                        <div class="cart-footer">
+                            <div class="total">Total: $<span id="cartTotal">0.00</span></div>
+                            <button id="checkout" class="btn primary">Finalizar Compra</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Codigo de Picachos de Ola-->
+    <div class="imagen-con-titulo">
+        <img src="img/PichachosOla.jpg" alt="PichachosOla">
+        <h1>Picachos de Olá</h1>
+    </div>
+
+    <!--Informacion -->
+    <div class="contenedor-pricipal">
+        <!--Informacion 1-->
+        <div class="contenedor-1">
+            <div class="informacion-p left">
+                <h2>Descubre de Picachos de Olá</h2>
+                <p>
+                    Ubicados en el corazón del paisaje natural, los Picachos de Olá ofrece
+                    aire puro y tranquilidad que solo la naturaleza puede brindar.
+                <ul>
+                    <li>Amplío de flora y fauna.</li>
+                    <li>Increible paisaje para fotografiar</li>
+                    <li>Hermosas rutas, para todos los niveles</li>
+                </ul>
+                </p>
+            </div>
+            <img src="img/PichachosOlaF.jpg" alt="Imagen de Picachos" class="side-img">
+        </div>
+
+        <!--Informacion 2-->
+        <div class="contenedor-2">
+            <div class="informacion-p">
+                <h2>Información y ubicación de Picachos de Olá</h2>
+                <p>
+                    Los picachos de Olá son formaciones rocosas únicas en forma de picos puntiagudos,
+                    ubicadas en el distrito de Olá, provincia de Coclé, Panamá. <br>
+                    <b>Ubicación y Acceso</b><br>
+                    Se encuentran cerca de la carretera Panamericana, después del distrito de Natá, siguiendo letreros
+                    hacia Olá y Churube.
+                    La caminata hasta la cima toma 20-30 minutos o hasta 1 hora y 30 minutos según el sendero, con
+                    ascenso abrupto sobre rocas sueltas;
+                    se requiere permiso en la finca de entrada, gratis, y es accesible en bus desde Penonomé o Aguadulce
+                    más taxi local. No ir con niños,
+                    mascotas ni en lluvia por riesgos de rayos y caídas.
+                </p>
+            </div>
+            <img src="img/PichachosOla.jpg" alt="Picachos de Ola" class="side-img">
+        </div>
+
+        <!--Informacion 3-->
+        <div class="contenedor-3">
+            <div class="informacion-p">
+                <h2>Actividades y Recomendaciones</h2>
+                <p>
+                    Populares para hiking al amanecer, fotos y tours grupales desde $45 que
+                    incluyen cascadas cercanas como Las Mesitas o Chorros de Olá. Llevar ropa dry-fit,
+                    pantalón largo, agua, snacks, repelente y ropa de cambio; evitar jeans y subir en mal tiempo.
+                </p>
+            </div>
+            <img src="img/Actividad.jpg" alt="Actividad" class="side-img">
+        </div>
+    </div>
+    <!-- Botón destacado a Paquetes -->
+    <div class="boton-paquetes-container">
+        <a href="PaquetesPicachos.html" class="btn-paquetes">Ver Paquetes Picachos</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="col">
+                <h4>Acerca de</h4>
+                <p>Turismo de Coclé — Promoviendo destinos locales.</p>
+            </div>
+            <div class="col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Contacto</h4>
+                <p>info@cocletour@gmail.com</p>
+                <p>+507 6490-8994</p>
+            </div>
+            <div class="col">
+                <h4>Síguenos</h4>
+                <p>Redes sociales etc etc</p>
+            </div>
+        </div>
+        <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
