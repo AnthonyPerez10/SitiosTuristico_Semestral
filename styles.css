@@ -147,6 +147,7 @@ body{
 }
 
 /*============ Style De picachos de Ola ===============*/
+/*=========== Style de parque omar torrijos ============*/
 .imagen-con-titulo{
   position: relative; 
   width: 100%;
@@ -244,6 +245,31 @@ body{
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   margin-left: 0px ;
+}
+/*Galeria a la izquierda de Paque omar*/
+.galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* todas a la izquierda */
+}
+
+.side-img2 {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 15px;
+  margin-left: 0px;
+}
+/*Efectos en la imagenes ZOOM ´+ LEVANATAR*/
+.side-img2, .side-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.side-img2:hover, .side-img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.35);
 }
 
 /*Estilo de paquetes de picachos*/

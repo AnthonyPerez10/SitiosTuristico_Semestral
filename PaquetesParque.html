@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquetes Parque Omar Torrijos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-grid">
+            <a href="index.html" class="logo">Coclé<span class="accent">Tour</span></a>
+
+            <nav class="nav" aria-label="Menú principal">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ParqueOmar.html">Parque Omar Torrijos</a></li>
+                    <li><a href="PaquetesParque.html">Paquetes</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="cart" id="cartWidget" aria-live="polite">
+                    <button id="cartBtn">🛒 <span id="cartCount">0</span></button>
+                    <div id="cartDropdown" class="cart-dropdown">
+                        <ul id="cartItems"></ul>
+                        <div class="cart-footer">
+                            <div class="total">Total: $<span id="cartTotal">0.00</span></div>
+                            <button id="checkout" class="btn primary">Finalizar Compra</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <div class="imagen-con-titulo">
+        <img src="img/ParqueOmar.jpeg" alt="Parque omar">
+        <h1>Parque Omar Torrijos</h1>
+    </div>
+
+    <!-- Sección de paquetes -->
+    <main class="contenedor-paquetes">
+        <h2>Elige tu paquete</h2>
+
+        <!-- Paquete 1 -->
+        <div class="paquete-card">
+            <img src="img/TrasportePaquete.png" alt="Tour con transporte" class="side-img">
+            <div class="paquete-info">
+                <h3>Paquete Completo - Transporte + Picachos</h3>
+                <p>
+                    Incluye transporte ida y vuelta desde Ciudad de Panamá, caminata guiada a los Picachos
+                    de Olá y tiempo para fotografías.
+                    <b>$85 por persona</b>.
+                </p>
+                <label for="cantidad3">Cantidad de personas:</label>
+                <input type="number" id="cantidad3" min="1" value="1">
+                <button class="agregar-btn" data-nombre="Paquete Completo (Transporte + Picachos)" data-precio="85">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Paquete 2 -->
+        <div class="paquete-card">
+            <img src="img/TrasportePaquete2.jpg" alt="Experiencia premium" class="side-img">
+            <div class="paquete-info">
+                <h3>Experiencia Premium – Transporte + Almuerzo + Fotografía</h3>
+                <p>
+                    Incluye transporte ida y vuelta, caminata guiada, almuerzo típico, hidratación
+                    y sesión fotográfica profesional.
+                    <b>$145 por persona</b>.
+                </p>
+                <label for="cantidad5">Cantidad de personas:</label>
+                <input type="number" id="cantidad4" min="1" value="1">
+                <button class="agregar-btn" data-nombre="Experiencia Premium (Transporte + Almuerzo)" data-precio="145">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- Paquete 3 ---->
+        <div class="paquete-card">
+            <img src="img/SenderismoPaquete.jpeg" alt="Senderismo interno" class="side-img">
+            <div class="paquete-info">
+                <h3>Paquete de Senderismo Interno</h3>
+                <p>
+                    Ideal para quienes llegan directamente al sitio.
+                    Incluye recorrido guiado por los Picachos de Olá, visita a miradores,
+                    tiempo para fotografías y orientación en los senderos.
+                    <b>$30 por persona</b>.
+                </p>
+
+                <label for="cantidad6">Cantidad de personas:</label>
+                <input type="number" id="cantidad5" min="1" value="1">
+
+                <button class="agregar-btn" data-nombre="Senderismo Interno (sin transporte)" data-precio="30">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+        <!--Paquete 4-->
+        <div class="paquete-card">
+            <img src="img/FotografiaPaquete.jpg" alt="Tour Fotográfico" class="side-img">
+            <div class="paquete-info">
+                <h3>Tour Fotográfico Profesional</h3>
+                <p>
+                    Recorrido para capturar paisajes, flora y fauna con un fotógrafo guía.
+                    Incluye asistencia técnica básica y ruta especial para tomas únicas.
+                    <b>$65 por persona</b>.
+                </p>
+
+                <label for="cantidad10">Cantidad de personas:</label>
+                <input type="number" id="cantidad6" min="1" value="1">
+
+                <button class="agregar-btn" data-nombre="Tour Fotográfico Profesional" data-precio="65">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- Paquete 5-->
+        <div class="paquete-card">
+            <img src="img/Parque.jpeg" alt="Amanecer Picachos" class="side-img">
+            <div class="paquete-info">
+                <h3>Experiencia Amanecer</h3>
+                <p>
+                    Incluye guía local al mirador principal para disfrutar del amanecer,
+                    hidratación ligera y sesión de fotos básica.
+                    <b>$40 por persona</b>.
+                </p>
+
+                <label for="cantidad8">Cantidad de personas:</label>
+                <input type="number" id="cantidad7" min="1" value="1">
+
+                <button class="agregar-btn" data-nombre="Experiencia Amanecer" data-precio="40">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- Formulario de confirmación -->
+        <div id="modalCompra" class="modal" aria-hidden="true">
+            <div class="modal-content">
+                <span id="closeModalCompra" class="close">&times;</span>
+                <h2>Confirmar compra</h2>
+                <form id="formCompra">
+                    <label>Nombre completo:<input type="text" id="nombreCliente" required></label>
+                    <label>Edad:<input type="number" id="edadCliente" required></label>
+                    <label>Cantidad de personas:<input type="number" id="cantidadCliente" min="1" required></label>
+                    <label>Horario de llegada:<input type="time" id="horarioCliente" required></label>
+                    <button type="submit">Confirmar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="col">
+                <h4>Acerca de</h4>
+                <p>Turismo de Coclé — Promoviendo destinos locales.</p>
+            </div>
+            <div class="col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Contacto</h4>
+                <p>info@cocletour@gmail.com</p>
+                <p>+507 6490-8994</p>
+            </div>
+        </div>
+        <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

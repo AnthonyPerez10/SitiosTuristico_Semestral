@@ -10,37 +10,24 @@
 
 <body>
     <!-- Menu de navegacion-->
+      <!-- Header -->
     <header class="site-header">
         <div class="container header-grid">
             <a href="index.html" class="logo">Coclé<span class="accent">Tour</span></a>
 
             <nav class="nav" aria-label="Menú principal">
-                <button id="navToggle" class="hamburger" aria-expanded="false" aria-controls="mainMenu">
-                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                </button>
-
-                <ul id="mainMenu" class="menu">
+                <ul class="menu">
                     <li><a href="index.html">Inicio</a></li>
-                    <li class="has-dropdown">
-                        <a href="#" aria-haspopup="true">Sitios</a>
-                        <ul class="dropdown">
-                            <li><a href="Picachos.html">Picachos de Olá</a></li>
-                            <li><a href="ParqueOmar.html">Parque Omar Torrijos — El Copé</a></li>
-                            <li><a href="SantaClara.html">Playa Santa Clara</a></li>
-                        </ul>
-                    </li>
-                    <!--<li><a href="Paquetes.html">Paquetes</a></li>-->
-                    <li><a href="Juego.html">Juego</a></li>
+                    <li><a href="Picachos.html">Picachos de Olá</a></li>
+                    <li><a href="PaquetesPicachos.html">Paquetes</a></li>
                     <li><a href="Contacto.html">Contacto</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
-                <button id="openChat" class="chat-btn" title="Abrir chat">💬</button>
                 <div class="cart" id="cartWidget" aria-live="polite">
-                    <button id="cartBtn" aria-haspopup="true" aria-expanded="false">🛒 <span
-                            id="cartCount">0</span></button>
-                    <div id="cartDropdown" class="cart-dropdown" aria-hidden="true">
+                    <button id="cartBtn">🛒 <span id="cartCount">0</span></button>
+                    <div id="cartDropdown" class="cart-dropdown">
                         <ul id="cartItems"></ul>
                         <div class="cart-footer">
                             <div class="total">Total: $<span id="cartTotal">0.00</span></div>

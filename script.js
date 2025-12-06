@@ -212,24 +212,27 @@ document.addEventListener("click", (e) => {
 const yearEl = $("#year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-/* ==== Paquetes Picachos de Olá ==== */
-// Variable global única
+/* ==== Paquetes Picachos de Olá y paquete de Omar torrijos ==== */
 let paqueteSeleccionado = null;
 const modalCompra = document.getElementById("modalCompra");
 const closeModalCompra = document.getElementById("closeModalCompra");
 const formCompra = document.getElementById("formCompra");
 
 // Abrir modal al hacer clic en cualquier botón de agregar
-document.querySelectorAll(".agregar-btn").forEach((btn, index) => {
+document.querySelectorAll(".agregar-btn").forEach(btn => {
     btn.addEventListener("click", () => {
         const nombre = btn.dataset.nombre;
         const precio = parseFloat(btn.dataset.precio);
-        const id = `picachos${index+1}`;
-        const cantidadInput = document.getElementById(`cantidad${index+1}`);
+
+        // Encontrar el input de cantidad dentro del mismo paquete
+        const paqueteCard = btn.closest(".paquete-card");
+        const cantidadInput = paqueteCard.querySelector("input[type=number]");
         const cantidad = parseInt(cantidadInput.value);
 
         if (cantidad < 1) return alert("Ingresa al menos 1 persona.");
 
+        // Generar ID único basado en tiempo + nombre
+        const id = `paquete_${nombre.replace(/\s+/g, "_")}_${Date.now()}`;
         paqueteSeleccionado = { id, nombre, precio, cantidad };
 
         // Limpiar formulario
@@ -256,6 +259,7 @@ document.querySelectorAll(".agregar-btn").forEach((btn, index) => {
             <button type="submit">Confirmar Compra</button>
         `;
 
+        // Mostrar modal
         modalCompra.setAttribute("aria-hidden", "false");
     });
 });
@@ -282,7 +286,7 @@ formCompra.addEventListener("submit", (e) => {
 
     // Agregar al carrito global
     cart.items.push({
-        id: paqueteSeleccionado.id + "-" + new Date().getTime(), // id único para no sobrescribir
+        id: paqueteSeleccionado.id, // ID único
         name: `${paqueteSeleccionado.nombre} - ${detallesPersonas} - ${horario}`,
         price: paqueteSeleccionado.precio,
         qty: cantidad
