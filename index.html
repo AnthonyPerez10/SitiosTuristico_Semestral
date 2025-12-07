@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Turismo de Coclé — Inicio</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -14,49 +16,55 @@
 
   <!-- Bienvenida -->
   <div id="welcomeModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="welcomeTitle">
-    <div class="modal-content">
-      <button class="modal-close" id="closeModal" aria-label="Cerrar">✕</button>
+    <div class="modal-contenido">
+      <button class="modal-cerrar" id="closeModal" aria-label="Cerrar">✕</button>
       <h2 id="welcomeTitle">Bienvenido a Turismo de Coclé</h2>
       <p>Explora los mejores destinos, reserva paquetes y juega para ganar descuentos.</p>
-      <button id="enterSite" class="btn primary">Entrar al sitio</button>
+      <button id="enterSite" class="btn primario">Entrar al sitio</button>
     </div>
   </div>
 
   <!-- Menu de navegacion-->
-  <header class="site-header">
+  <header class="cabecera">
     <div class="container header-grid">
       <a href="index.html" class="logo">Coclé<span class="accent">Tour</span></a>
 
-      <nav class="nav" aria-label="Menú principal">
-        <button id="navToggle" class="hamburger" aria-expanded="false" aria-controls="mainMenu">
-          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <nav class="navegacion" aria-label="Menú principal">
+        <button id="navToggle" class="hamburguesa" aria-expanded="false" aria-controls="mainMenu">
+        <span class="barra"></span><span class="barra"></span><span class="barra"></span>
         </button>
 
         <ul id="mainMenu" class="menu">
           <li><a href="index.html">Inicio</a></li>
-          <li class="has-dropdown">
+          <li class="tiene-desplegable">
             <a href="#" aria-haspopup="true">Sitios</a>
-            <ul class="dropdown">
+            <ul class="desplegable">
               <li><a href="Picachos.html">Picachos de Olá</a></li>
-              <li><a href="ParqueOmar.html">Parque Omar Torrijos — El Copé</a></li>
+              <li><a href="ParqueOmar.html">Parque Omar Torrijos</a></li>
               <li><a href="SantaClara.html">Playa Santa Clara</a></li>
             </ul>
           </li>
-          <!--<li><a href="Paquetes.html">Paquetes</a></li>-->
           <li><a href="Juego.html">Juego</a></li>
           <li><a href="Contacto.html">Contacto</a></li>
+          <li><a href="SobreNosotros.html">Sobre nosotros</a></li>
         </ul>
       </nav>
 
-      <div class="header-actions">
-        <button id="openChat" class="chat-btn" title="Abrir chat">💬</button>
-        <div class="cart" id="cartWidget" aria-live="polite">
-          <button id="cartBtn" aria-haspopup="true" aria-expanded="false">🛒 <span id="cartCount">0</span></button>
-          <div id="cartDropdown" class="cart-dropdown" aria-hidden="true">
+      <div class="acciones-cabecera">
+        <button id="openChat" class="btn-chat" title="Abrir chat">
+       <img src="img/chatbot.png" alt="Chat" class="icono-btn">
+      </button>
+
+        <div class="carrito" id="cartWidget" aria-live="polite">
+          <button id="cartBtn" aria-haspopup="true" aria-expanded="false">
+          <img src="img/carrito.png" alt="Carrito" class="icono-btn">
+          <span id="cartCount">0</span>
+          </button>
+          <div id="cartDropdown" class="desplegable-carrito" aria-hidden="true">
             <ul id="cartItems"></ul>
-            <div class="cart-footer">
+            <div class="carrito-footer">
               <div class="total">Total: $<span id="cartTotal">0.00</span></div>
-              <button id="checkout" class="btn primary">Finalizar Compra</button>
+              <button id="checkout" class="btn primario">Finalizar Compra</button>
             </div>
           </div>
         </div>
@@ -64,49 +72,55 @@
     </div>
   </header>
 
-  <!-- Slider de imagenes -->
+<!-- Contenido principal -->
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h1>Descubre Coclé</h1>
-          <p>Playas, montañas y cultura. Encuentra paquetes, juega y ahorra.</p>
+    <!-- Portada / hero -->
+    <section class="portada">
+      <div class="container portada-grid">
+        <div class="texto-portada">
+          <h1 class="titulo">Descubre Coclé</h1>
+          <p class="subtitulo">
+                Explora playas increíbles, montañas verdes y cultura única.  
+                Encuentra paquetes, vive experiencias y haz tu viaje inolvidable.
+          </p>
+            <a href="#paquetes" class="btn primario btn-paquetes">Ver Paquetes</a>
         </div>
-
-        <div class="slider" id="mainSlider" aria-roledescription="carousel">
-          <div class="slides">
-            <div class="slide active" style="background-image:url('img/Picachos.jpg')"></div>
-            <div class="slide" style="background-image:url('img/Parque.jpeg')"></div>
-            <div class="slide" style="background-image:url('img/Playa.jpg')"></div>
-
+        <div class="carrusel" id="mainSlider" aria-roledescription="carousel">
+          <div class="diapositivas">
+            <div class="diapo activa" style="background-image:url('img/Picachos.jpg')"></div>
+            <div class="diapo" style="background-image:url('img/Parque.jpeg')"></div>
+            <div class="diapo" style="background-image:url('img/Playa.jpg')"></div>
           </div>
-
-          <button class="slide-nav prev" aria-label="Anterior">‹</button>
-          <button class="slide-nav next" aria-label="Siguiente">›</button>
-          <div class="dots" id="sliderDots"></div>
+          <button class="nav-diapo anterior" aria-label="Anterior">
+          <img src="img/flecha-izquierda.png" alt="Anterior" class="flecha-icono">
+          </button>
+          <button class="nav-diapo siguiente" aria-label="Siguiente">
+          <img src="img/flecha-derecha.png" alt="Siguiente" class="flecha-icono">
+          </button>
+          <div class="puntos" id="sliderDots"></div>
         </div>
       </div>
     </section>
 
-    <!-- Sección de destinos destacados -->
-    <section class="featured container">
+    <!-- Destinos destacados -->
+    <section class="destacados container">
       <h2>Destinos destacados</h2>
-      <div class="cards-grid">
-        <article class="card">
+      <div class="tarjetas-grid">
+        <article class="tarjeta">
           <img src="img/Picachos.jpg" alt="Picachos de Olá" />
           <h3>Picachos de Olá</h3>
           <p>Vistas panorámicas, senderos y naturaleza en estado puro.</p>
           <a href="Picachos.html" class="btn">Más</a>
         </article>
 
-        <article class="card">
+        <article class="tarjeta">
           <img src="img/Parque.jpeg" alt="Parque Omar Torrijos — El Copé" />
-          <h3>Parque Omar Torrijos — El Copé</h3>
+          <h3>Parque Omar Torrijos</h3>
           <p>Reserva natural con biodiversidad y rutas ecológicas.</p>
           <a href="ParqueOmar.html" class="btn">Más</a>
         </article>
 
-        <article class="card">
+        <article class="tarjeta">
           <img src="img/Playa.jpg" alt="Playa Santa Clara" />
           <h3>Playa Santa Clara</h3>
           <p>Playas serenas, ideal para relajarte y desconectar.</p>
@@ -115,70 +129,86 @@
       </div>
     </section>
 
-    <!-- Paquetes y los botones de comprar -->
-    <section class="packages container">
+    <!-- Paquetes -->
+    <section class="paquetes container" id="paquetes">
       <h2>Paquetes populares</h2>
-      <div class="packages-grid">
-        <div class="package-card">
+      <div class="paquetes-grid">
+        <div class="paquete-card">
           <h3>Escapada de Aventura</h3>
           <p>2 días · Transporte incluido</p>
           <div class="price">$120.00</div>
-          <button class="btn buy" data-id="p1" data-name="Escapada de Aventura" data-price="120">Comprar</button>
+          <button class="btn comprar" data-id="p1" data-name="Escapada de Aventura" data-price="120">Comprar</button>
         </div>
 
-        <div class="package-card">
+        <div class="paquete-card">
           <h3>Relax en la Playa</h3>
           <p>3 días · Hotel 3 estrellas</p>
           <div class="price">$200.00</div>
-          <button class="btn buy" data-id="p2" data-name="Relax en la Playa" data-price="200">Comprar</button>
+          <button class="btn comprar" data-id="p2" data-name="Relax en la Playa" data-price="200">Comprar</button>
         </div>
 
-        <div class="package-card">
+        <div class="paquete-card">
           <h3>Tour Cultural</h3>
           <p>1 día · Guía local</p>
           <div class="price">$60.00</div>
-          <button class="btn buy" data-id="p3" data-name="Tour Cultural" data-price="60">Comprar</button>
+          <button class="btn comprar" data-id="p3" data-name="Tour Cultural" data-price="60">Comprar</button>
         </div>
       </div>
     </section>
 
-    <!-- Juego -->
-    <section class="cta container">
-      <div class="cta-card">
+    <!-- Llamado a la acción -->
+    <section class="llamado container">
+      <div class="contenedor-llamado">
+      <div class="tarjeta-llamado">
         <h2>Juego: Encuentra el Tesoro</h2>
         <p>Juega y gana descuentos en paquetes.</p>
-        <a href="Juego.html" class="btn">Jugar ahora</a>
+        <a href="Juego.html" class="btn primario">Jugar ahora</a>
+      </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="pie-pagina">
     <div class="container footer-grid">
       <div class="col">
         <h4>Acerca de</h4>
-        <p>Turismo de Coclé — Promoviendo destinos locales.</p>
+        <p>Turismo de Coclé </p> <p>Promoviendo destinos locales.</p>
       </div>
       <div class="col">
         <h4>Enlaces</h4>
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="Contacto.html">Contacto</a></li>
+          <li><a href="Juego.html">Juego</a></li>
+          <li><a href="SobreNosotros.html">Sobre nosotros</a></li>
         </ul>
       </div>
       <div class="col">
         <h4>Contacto</h4>
-        <p>info@cocletour@gmail.com</p>
+        <p>info.cocletour@gmail.com</p>
         <p>+507 6490-8994</p>
       </div>
       <div class="col">
-        <h4>Síguenos</h4>
-        <p>Redes sociales etc etc</p>
-      </div>
+  <h4>Síguenos</h4>
+  <p class="redes">
+    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+
+    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+  </p>
+</div>
     </div>
     <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
   </footer>
-
+  
   <script src="script.js"></script>
 </body>
 
