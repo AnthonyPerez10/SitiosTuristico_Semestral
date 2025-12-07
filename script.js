@@ -4,16 +4,16 @@
 const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 
-/*  BIENVENIDA */
+/*  BIENVENIDA (modal) */
 const welcomeModal = $("#welcomeModal");
 const closeModal = $("#closeModal");
 const enterSite = $("#enterSite");
 
-function showModal() {
+function mostrarModal() {
   if (!welcomeModal) return;
   welcomeModal.setAttribute("aria-hidden", "false");
 }
-function hideModal() {
+function ocultarModal() {
   if (!welcomeModal) return;
   welcomeModal.setAttribute("aria-hidden", "true");
 }
@@ -21,22 +21,22 @@ function hideModal() {
 /* Mostrar bienvenida solo la primera vez (localStorage) */
 try {
   if (!localStorage.getItem("seenWelcome")) {
-    showModal();
+    mostrarModal();
     localStorage.setItem("seenWelcome", "1");
   }
-} catch (e) { /* si storage bloqueado, no falla la página */ }
+} catch (e) { /* si storage bloqueado, no rompe la página */ }
 
 /* Eventos bienvenida */
-if (closeModal) closeModal.addEventListener("click", hideModal);
-if (enterSite) enterSite.addEventListener("click", hideModal);
+if (closeModal) closeModal.addEventListener("click", ocultarModal);
+if (enterSite) enterSite.addEventListener("click", ocultarModal);
 
 /* Cerrar con Escape o clic en overlay */
 if (welcomeModal) {
   welcomeModal.addEventListener("click", (e) => {
-    if (e.target === welcomeModal) hideModal();
+    if (e.target === welcomeModal) ocultarModal();
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && welcomeModal.getAttribute("aria-hidden") === "false") hideModal();
+    if (e.key === "Escape" && welcomeModal.getAttribute("aria-hidden") === "false") ocultarModal();
   });
 }
 
@@ -58,69 +58,64 @@ if (navToggle && mainMenu) {
   });
 }
 
-/*  SLIDER */
+/*  CARRUSEL / SLIDER */
+
 (function () {
-  const slideEls = Array.from(document.querySelectorAll(".slide"));
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
-  const dotsWrap = document.getElementById("sliderDots");
+  const slideEls = Array.from(document.querySelectorAll(".diapo"));
+  const prevBtn = document.querySelector(".anterior");
+  const nextBtn = document.querySelector(".siguiente");
+  const dotsWrap = document.getElementById("sliderDots"); // id mantenido
   let idx = 0;
   let timer = null;
   const DELAY = 4500;
 
   if (slideEls.length === 0) return;
 
-  // crear dots
+  // crear puntos (dots)
   if (dotsWrap) {
     dotsWrap.innerHTML = "";
     slideEls.forEach((_, i) => {
       const b = document.createElement("button");
-      b.addEventListener("click", () => { goTo(i); restart(); });
-      if (i === 0) b.classList.add("active");
+      b.type = "button";
+      b.addEventListener("click", () => { irA(i); reiniciar(); });
+      if (i === 0) b.classList.add("activo");
       dotsWrap.appendChild(b);
     });
   }
 
-  // preload check
-  slideEls.forEach((slide, i) => {
-    const img = slide.querySelector("img");
-    if (!img) return;
-    img.addEventListener("error", () => {
-      console.error("Fallo al cargar imagen:", img.src);
-      img.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%' height='100%' fill='%23eee'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-size='20'>Imagen no disponible</text></svg>";
-    });
-  });
 
-  function goTo(i) {
-    slideEls.forEach((s, j) => s.classList.toggle("active", j === i));
+  function irA(i) {
+    slideEls.forEach((s, j) => s.classList.toggle("activa", j === i));
     if (dotsWrap) {
-      Array.from(dotsWrap.children).forEach((d, j) => d.classList.toggle("active", j === i));
+      Array.from(dotsWrap.children).forEach((d, j) => d.classList.toggle("activo", j === i));
     }
     idx = i;
   }
-  function next() { goTo((idx + 1) % slideEls.length); }
-  function prev() { goTo((idx - 1 + slideEls.length) % slideEls.length); }
-  function start() { stop(); timer = setInterval(next, DELAY); }
-  function stop() { if (timer) { clearInterval(timer); timer = null; } }
-  function restart() { stop(); start(); }
+  function siguiente() { irA((idx + 1) % slideEls.length); }
+  function anterior() { irA((idx - 1 + slideEls.length) % slideEls.length); }
+  function iniciar() { detener(); timer = setInterval(siguiente, DELAY); }
+  function detener() { if (timer) { clearInterval(timer); timer = null; } }
+  function reiniciar() { detener(); iniciar(); }
 
-  if (nextBtn) nextBtn.addEventListener("click", () => { next(); restart(); });
-  if (prevBtn) prevBtn.addEventListener("click", () => { prev(); restart(); });
+  if (nextBtn) nextBtn.addEventListener("click", () => { siguiente(); reiniciar(); });
+  if (prevBtn) prevBtn.addEventListener("click", () => { anterior(); reiniciar(); });
 
   // iniciar el slider 
-  goTo(0);
-  start();
+  irA(0);
+  iniciar();
 
   // export minimal debugging handles 
-  window._sliderControl = { goTo, next, prev, start, stop, restart };
+  window._sliderControl = { irA, siguiente, anterior, iniciar, detener, reiniciar };
 })();
 
 
-/*CARRITO SIMPLE (localStorage) */
+/* CARRITO SIMPLE (localStorage)
+*/
 const cart = {
   items: JSON.parse(localStorage.getItem("cartItems") || "[]"),
   save() { localStorage.setItem("cartItems", JSON.stringify(this.items)); },
   add(item) {
+    // item: { id, name, price }
     const found = this.items.find(i => i.id === item.id);
     if (found) found.qty += 1; else this.items.push({ ...item, qty: 1 });
     this.save(); renderCart();
@@ -147,7 +142,7 @@ function renderCart() {
       li.style.display = "flex";
       li.style.justifyContent = "space-between";
       li.style.padding = ".4rem 0";
-      li.innerHTML = `<span>${it.name} x${it.qty}</span><strong>$${(it.price * it.qty).toFixed(2)}</strong>`;
+      li.innerHTML = `<span>${escapeHtml(it.name)} x${it.qty}</span><strong>$${(it.price * it.qty).toFixed(2)}</strong>`;
       cartItemsEl.appendChild(li);
     });
   }
@@ -164,55 +159,92 @@ if (cartBtn) {
   });
 }
 
-/* Comprar botones */
+/* Comprar / Agregar al carrito*/
 document.addEventListener("click", (e) => {
-  if (e.target.matches(".btn.buy")) {
-    const id = e.target.dataset.id;
-    const name = e.target.dataset.name;
-    const price = parseFloat(e.target.dataset.price);
+  const target = e.target;
+  if (target.matches(".comprar") || target.matches(".agregar-carrito") || target.closest(".comprar") || target.closest(".agregar-carrito")) {
+    const btn = target.matches(".comprar") || target.matches(".agregar-carrito") ? target : target.closest(".comprar") || target.closest(".agregar-carrito");
+    const id = btn.dataset.id || ("p_" + Math.random().toString(36).slice(2,9));
+    const name = btn.dataset.name || btn.dataset.nombre || (btn.textContent || "Producto").trim();
+    const price = parseFloat(btn.dataset.price || btn.dataset.precio || "0") || 0;
     cart.add({ id, name, price });
-    e.target.textContent = "Añadido ✓";
-    setTimeout(() => e.target.textContent = "Comprar", 900);
+    // feedback UI
+    const orig = btn.textContent;
+    btn.textContent = "Añadido ✓";
+    setTimeout(() => btn.textContent = orig, 900);
   }
 });
 
-/* Finalizar compra*/
+/* Finalizar compra */
 if (checkoutBtn) checkoutBtn.addEventListener("click", () => {
-  if (cart.items.length === 0) { 
-    alert("El carrito está vacío."); 
-    return; 
+  if (cart.items.length === 0) {
+    alert("El carrito está vacío.");
+    return;
   }
 
-  // Mostrar total real del carrito
+  //Mostrar total real del carrito
   alert(`Compra finalizada.\nTotal: $${cart.total().toFixed(2)}\n(Implementa pago en la siguiente fase).`);
-
-  // Limpiar carrito
+ 
+  //Limpiar carrito 
   cart.clear();
 
-  // Ocultar dropdown
+  //Ocultar dropdown
   if (cartDropdown) cartDropdown.style.display = "none";
 
-  // Actualizar UI
+  //Actualizar
   renderCart();
 });
 
-/* HAT (placeholder)  */
+/* CHAT (placeholder) */
 const openChat = $("#openChat");
 if (openChat) openChat.addEventListener("click", () => alert("Chat: función básica. La implementamos en la siguiente iteración."));
 
-/*  Cerrar dropdowns al click fuera  */
+/* Cerrar dropdowns al click fuera */
 document.addEventListener("click", (e) => {
   const cartEl = $("#cartWidget");
   if (cartDropdown && cartEl && !cartEl.contains(e.target) && cartDropdown.style.display === "block") {
     cartDropdown.style.display = "none";
   }
+
+  // cerrar menú móvil al hacer click fuera (si está abierto)
+  if (mainMenu && mainMenu.classList.contains("show")) {
+    const navToggleEl = $("#navToggle");
+    const navWrap = document.querySelector(".navegacion");
+    if (navWrap && !navWrap.contains(e.target) && navToggleEl && e.target !== navToggleEl) {
+      mainMenu.classList.remove("show");
+      if (navToggleEl) navToggleEl.setAttribute("aria-expanded", "false");
+    }
+  }
 });
 
-/*  AÑO FOOTER  */
+/* AÑO EN FOOTER */
 const yearEl = $("#year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+
 /* ==== Paquetes Picachos de Olá y paquete de Omar torrijos ==== */
+
+/* ===== helpers ===== */
+function escapeHtml(str) {
+  if (!str) return "";
+  return String(str).replace(/[&<>"'`=\/]/g, function (s) {
+    return ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;',
+      '/': '&#x2F;',
+      '`': '&#x60;',
+      '=': '&#x3D;'
+    })[s];
+  });
+}
+
+
+/* ==== Paquetes Picachos de Olá ==== */
+// Variable global única
+
 let paqueteSeleccionado = null;
 const modalCompra = document.getElementById("modalCompra");
 const closeModalCompra = document.getElementById("closeModalCompra");

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contacto</title>
+</head>
+<body>
+  <!-- Menu de navegacion-->
+  <header class="cabecera">
+    <div class="container header-grid">
+      <a href="index.html" class="logo">Coclé<span class="accent">Tour</span></a>
+
+        <nav class="navegacion" aria-label="Menú principal">
+        <button id="navToggle" class="hamburguesa" aria-expanded="false" aria-controls="mainMenu">
+        <span class="barra"></span><span class="barra"></span><span class="barra"></span>
+        </button>
+
+        <ul id="mainMenu" class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="tiene-desplegable">
+            <a href="#" aria-haspopup="true">Sitios</a>
+            <ul class="desplegable">
+              <li><a href="Picachos.html">Picachos de Olá</a></li>
+              <li><a href="ParqueOmar.html">Parque Omar Torrijos</a></li>
+              <li><a href="SantaClara.html">Playa Santa Clara</a></li>
+            </ul>
+          </li>
+          <li><a href="Juego.html">Juego</a></li>
+          <li><a href="Contacto.html">Contacto</a></li>
+          <li><a href="SobreNosotros.html">Sobre nosotros</a></li>
+        </ul>
+      </nav>
+
+      <div class="acciones-cabecera">
+        <button id="openChat" class="btn-chat" title="Abrir chat">
+       <img src="img/chatbot.png" alt="Chat" class="icono-btn">
+      </button>
+
+        <div class="carrito" id="cartWidget" aria-live="polite">
+          <button id="cartBtn" aria-haspopup="true" aria-expanded="false">
+          <img src="img/carrito.png" alt="Carrito" class="icono-btn">
+          <span id="cartCount">0</span>
+          </button>
+
+          <div id="cartDropdown" class="desplegable-carrito" aria-hidden="true">
+            <ul id="cartItems"></ul>
+            <div class="carrito-footer">
+              <div class="total">Total: $<span id="cartTotal">0.00</span></div>
+              <button id="checkout" class="btn primario">Finalizar Compra</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    <main class="wrap" role="main">
+    <section class="grid" aria-labelledby="contact-title">
+
+      <!-- LEFT -->
+      <div class="left" id="left-col">
+        <h1 id="contact-title">Tienes<br>alguna pregunta?</h1>
+
+        <p>
+          ¡Estamos aqui para ayudarte!. Completa el formulario contactanos
+          correo electronico o telefono. Nuestro equipo de atencion al cliente 
+          esta disponible para ayudarte a obtener la mejor experiencia, ya sea que tengas 
+          un problema con tu compra o tengas alguna dudas sobre los tour.
+        </p>
+
+        <p class="hint">
+          Todos reciben una respuesta, asi que espera 24 horas, durante el horario comercial para recibir una respuesta.
+        </p>
+
+        <div class="contact-list" aria-label="Contact methods">
+          <a class="contact-item" href="mailto:info@cocletour@gmail.com">
+            info@cocletour@gmail.com
+          </a>
+
+          <a class="contact-item" href="tel:18445640382">
+            +507 6490-8994
+          </a>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="right" id="right-col">
+        <form id="contactForm" novalidate>
+          <div class="form-grid" role="group">
+
+            <!-- Nombre -->
+            <div>
+              <label for="firstName">Nombre</label>
+              <input id="firstName" name="firstName" type="text" required>
+            </div>
+
+            <div>
+              <label for="lastName">Apellido</label>
+              <input id="lastName" name="lastName" type="text">
+            </div>
+
+            <!-- Correo -->
+            <div class="full">
+              <label for="email">Correo electronico</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="full">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" required></textarea>
+              <div class="small-note" id="charCount">0 / 1200</div>
+            </div>
+
+            <!-- Boton Enviar -->
+            <div class="enviar-completo">
+              <button type="submit" class="btn-enviar">ENVIAR</button>
+            </div>
+
+            <div class="full">
+              <p class="hint">Nuestro horario de atención es de lunes a domingo de 9am a 5pm.</p>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+
+
+  <!-- Footer -->
+  <footer class="pie-pagina">
+    <div class="container footer-grid">
+      <div class="col">
+        <h4>Acerca de</h4>
+        <p>Turismo de Coclé </p> <p>Promoviendo destinos locales.</p>
+      </div>
+      <div class="col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="Contacto.html">Contacto</a></li>
+          <li><a href="Juego.html">Juego</a></li>
+          <li><a href="SobreNosotros.html">Sobre nosotros</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Contacto</h4>
+        <p>info.cocletour@gmail.com</p>
+        <p>+507 6490-8994</p>
+      </div>
+      <div class="col">
+  <h4>Síguenos</h4>
+  <p class="redes">
+    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+
+    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+  </p>
+</div>
+    </div>
+    <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
+  </footer>
+    <script src="Contacto.js"></script>
+</body>
+</html>
