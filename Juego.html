@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Juego de turismo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!--     Estudiantes: Brandom Arcia, Anthony Perez -->
+  <!-- Menu de navegacion-->
+  <header class="site-header">
+    <div class="container header-grid">
+      <a href="index.html" class="logo">Coclé<span class="accent">Tour</span></a>
+
+      <nav class="nav" aria-label="Menú principal">
+        <button id="navToggle" class="hamburger" aria-expanded="false" aria-controls="mainMenu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <ul id="mainMenu" class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="has-dropdown">
+            <a href="#" aria-haspopup="true">Sitios</a>
+            <ul class="dropdown">
+              <li><a href="Picachos.html">Picachos de Olá</a></li>
+              <li><a href="ParqueOmar.html">Parque Omar Torrijos — El Copé</a></li>
+              <li><a href="SantaClara.html">Playa Santa Clara</a></li>
+            </ul>
+          </li>
+          <!--<li><a href="Paquetes.html">Paquetes</a></li>-->
+          <li><a href="Juego.html">Juego</a></li>
+          <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="openChat" class="chat-btn" title="Abrir chat">💬</button>
+        <div class="cart" id="cartWidget" aria-live="polite">
+          <button id="cartBtn" aria-haspopup="true" aria-expanded="false">🛒 <span id="cartCount">0</span></button>
+          <div id="cartDropdown" class="cart-dropdown" aria-hidden="true">
+            <ul id="cartItems"></ul>
+            <div class="cart-footer">
+              <div class="total">Total: $<span id="cartTotal">0.00</span></div>
+              <button id="checkout" class="btn primary">Finalizar Compra</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Juego Dinamico de tiemo codigo-->
+  <h1 id="map-title">¡Atrapa los destinos turísticos!</h1>
+  <p id="map-info">Puntaje: <span id="score">0</span> | Tiempo: <span id="time">30</span>s</p>
+
+
+  <main id="map"></main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <h4>Acerca de</h4>
+        <p>Turismo de Coclé — Promoviendo destinos locales.</p>
+      </div>
+      <div class="col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Contacto</h4>
+        <p>info@cocletour@gmail.com</p>
+        <p>+507 6490-8994</p>
+      </div>
+      <div class="col">
+        <h4>Síguenos</h4>
+        <p>Redes sociales etc etc</p>
+      </div>
+    </div>
+    <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
+  </footer>
+
+  <script src="juego.js"></script>
+</body>
+
+</html>

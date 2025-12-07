@@ -148,6 +148,7 @@ body{
 
 /*============ Style De picachos de Ola ===============*/
 /*=========== Style de parque omar torrijos ============*/
+/*=========== Style de Santa clara ============*/
 .imagen-con-titulo{
   position: relative; 
   width: 100%;
@@ -272,7 +273,7 @@ body{
   box-shadow: 0 12px 22px rgba(0,0,0,0.35);
 }
 
-/*Estilo de paquetes de picachos*/
+/*Estilo de paquetes de picachos + santa clara + parque omar torrijos*/
 .contenedor-paquetes {
     max-width: 1000px;
     margin: 50px auto;
@@ -435,6 +436,138 @@ body{
 }
 .modal-content form button:hover {
     background-color: #285e61;
+}
+
+/* =========== ESTILOS DEL JUEGO: COCLÉ TOUR ============ */
+/* Área principal del juego (#map) */
+#map {
+    width: 90%;
+    max-width: 900px;
+    height: 500px;
+    margin: 40px auto; /* Más espacio alrededor para evitar que se vea apretado */
+    
+    /* Borde y fondo */
+    border: 3px solid #145A32; /* Borde fuerte y bien definido */
+    background-color: #E8F8F5; /* Fondo suave y relajante */
+    background-image: linear-gradient(180deg, #D4F4E4 0%, #E8F8F5 100%); /* Degradado sutil para más vida */
+
+    /* Comportamiento y apariencia */
+    position: relative; /* Importante para colocar destinos correctamente */
+    overflow: hidden;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 
+        0 10px 25px rgba(20, 90, 50, 0.15), /* Sombra exterior suave */
+        0 0 0 5px rgba(20, 90, 50, 0.05); /* Sutil borde interno */
+}
+
+/* Destinos/Objetivos del mapa (.destination) */
+.destination {
+    position: absolute;
+    width: 70px; /* Un poco más grandes para que sean fáciles de ver y tocar */
+    height: 70px;
+
+    /* Estilo visual base */
+    background-color: #C0392B; /* Rojo vivo y llamativo */
+    background-image: radial-gradient(circle, #E74C3C 0%, #C0392B 80%);
+    border-radius: 50%;
+    border: 2px solid white; /* Hace que resalte más */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Profundidad */
+    cursor: pointer;
+
+    /* Texto centrado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    padding: 5px; /* Algo de espacio para que los nombres no se corten */
+
+    /* Animaciones suaves para interacción */
+    transition: 
+        transform 0.2s ease-out,
+        opacity 0.2s ease-out,
+        box-shadow 0.2s ease-out;
+}
+
+/* Efecto al pasar el mouse (hover) */
+.destination:hover {
+    transform: scale(1.15); /* Aumenta el tamaño para darle feedback inmediato */
+    box-shadow: 0 6px 15px rgba(20, 90, 50, 0.5); /* Sombra más marcada */
+}
+
+/* Efecto al acertar un destino */
+.destination.hit {
+    background-color: #2ECC71; /* Verde para confirmar el acierto */
+    transform: scale(1.6); /* Expansión rápida para sensación de impacto */
+    opacity: 0; /* Desaparición suave */
+    box-shadow: 0 0 20px #2ECC71; /* Brillo para efecto de “pop” */
+}
+
+/* Texto de puntuación y tiempo */
+#map-title { text-align: center; color: #145A32; margin-bottom: 5px; font-size: 2.2em; }
+#map-info { text-align: center; font-size: 1.4em; color: #333; margin-bottom: 20px; }
+
+#score, #time {
+    font-weight: 900; /* Bien destacado */
+    color: #C0392B;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Pantalla de fin de juego */
+.game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.85); /* Fondo oscuro para enfoque total */
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 2.5em; /* Texto grande para impacto */
+    z-index: 10;
+    border-radius: 12px;
+}
+
+.game-over h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.game-over p {
+    color: #ECF0F1;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+.game-over button {
+    padding: 12px 30px;
+    margin-top: 30px;
+    font-size: 0.7em;
+    cursor: pointer;
+
+    background-color: #145A32; /* Verde fuerte */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Estilo “pill button” */
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: background-color 0.2s ease-in-out, transform 0.1s;
+}
+
+.game-over button:hover {
+    background-color: #1ABC9C; /* Verde más brillante */
+    transform: translateY(-2px); /* Mini efecto 3D */
 }
 
 /*=========== Diseño responsivo ======= */
