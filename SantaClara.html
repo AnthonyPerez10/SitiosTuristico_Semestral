@@ -6,22 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santa Clara</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stile-sitios.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-  <!--  Pagina principal -->
 
-  <!-- Bienvenida -->
-  <div id="welcomeModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="welcomeTitle">
-    <div class="modal-contenido">
-      <button class="modal-cerrar" id="closeModal" aria-label="Cerrar">✕</button>
-      <h2 id="welcomeTitle">Bienvenido a Turismo de Coclé</h2>
-      <p>Explora los mejores destinos, reserva paquetes y juega para ganar descuentos.</p>
-      <button id="enterSite" class="btn primario">Entrar al sitio</button>
-    </div>
-  </div>
-
-  <!-- Menu de navegacion-->
+     <!-- Menu de navegacion-->
   <header class="cabecera">
     <div class="container header-grid">
       <a href="index.html" class="logo">Coclé<span class="accent">Tour</span></a>
@@ -41,6 +32,7 @@
               <li><a href="SantaClara.html">Playa Santa Clara</a></li>
             </ul>
           </li>
+          <li><a href="Paquetes.html">Paquetes</a></li>
           <li><a href="Juego.html">Juego</a></li>
           <li><a href="Contacto.html">Contacto</a></li>
           <li><a href="SobreNosotros.html">Sobre nosotros</a></li>
@@ -48,10 +40,6 @@
       </nav>
 
       <div class="acciones-cabecera">
-        <button id="openChat" class="btn-chat" title="Abrir chat">
-       <img src="img/chatbot.png" alt="Chat" class="icono-btn">
-      </button>
-
         <div class="carrito" id="cartWidget" aria-live="polite">
           <button id="cartBtn" aria-haspopup="true" aria-expanded="false">
           <img src="img/carrito.png" alt="Carrito" class="icono-btn">
@@ -65,214 +53,210 @@
             </div>
           </div>
         </div>
+            <div class="cerrar-sesion" id="logoutBtn">
+           <button>
+            <img src="img/salir.png" alt="Cerrar sesión" class="icono-btn">
+         </button>
+        </div>
       </div>
     </div>
   </header>
 
-    <!-- Codigo de Parque Omar-->
-    <div class="imagen-con-titulo">
-        <img src="img/SantaClaraLogo.jpg" alt="SantaClara">
-        <h1>Playa Santa Clara</h1>
+      <section class="hero hero-3">
+  <div class="hero-contenido">
+    <h1>Playa Santa Clara</h1>
+  </div>
+</section>
+
+
+<!--Informacion -->
+<div class="contenedor-principal">
+
+    <!-- BLOQUE 1 -->
+    <div class="bloque-info">
+        <div class="informacion-p">
+            <h2>Playa Santa Clara - Coclé</h2>
+            <p>
+                Ubicada en la costa del Pacífico panameño, Playa Santa Clara es uno de los destinos
+                más populares de Coclé. Reconocida por su arena clara, aguas tranquilas y ambiente relajado.
+            </p>
+
+            <ul>
+                <li>Arenas blancas y aguas cálidas.</li>
+                <li>Ambiente tranquilo y perfecto para descansar.</li>
+                <li>Hospedajes y cabañas frente al mar.</li>
+                <li>Iideal para caminar, nadar y relajarse.</li>
+            </ul>
+        </div>
+
+        <img src="img/SantaClara.jpg"
+             alt="Imagen Playa Santa Clara"
+             class="side-img">
     </div>
 
-    <!--Informacion -->
-    <div class="contenedor-principal">
 
-        <!-- Información 1 -->
-        <div class="contenedor-1">
-            <div class="informacion-p left">
-                <h2>Playa Santa Clara - Coclé</h2>
-                <p>
-                    Ubicada en la costa del Pacífico panameño, Playa Santa Clara es uno de los destinos más populares de
-                    Coclé.
-                    Reconocida por su arena clara, aguas tranquilas y ambiente relajado, es ideal para disfrutar en
-                    familia
-                    o con amigos mientras te desconectas de la rutina.
-                </p>
-                <ul>
-                    <li>Arenas blancas y aguas cálidas.</li>
-                    <li>Ambiente tranquilo y perfecto para descansar.</li>
-                    <li>Opciones de hospedaje y cabañas frente al mar.</li>
-                    <li>Zonas ideales para caminar, nadar y relajarse.</li>
-                </ul>
-            </div>
+    <!-- BLOQUE 2 (reverse) -->
+    <div class="bloque-info reverse">
+        <div class="informacion-p2">
+            <h2>Información y ubicación de Playa Santa Clara</h2>
+            <p></p>
+            <p><b>📌 Ubicación</b></p>
+            <ul>
+                <li>Costa del Pacífico, provincia de Coclé.</li>
+                <li>A 1h 45m de la Ciudad de Panamá por la Interamericana.</li>
+                <li>Pertenece al corregimiento de Santa Clara, distrito de Antón.</li>
+                <li>Ambiente seguro, familiar y relajado.</li>
+            </ul>
+            <p></p>
+            <p><b>🌴 Naturaleza y atractivo turístico</b></p>
+            <p>
+                Arena clara, aguas cálidas y ambiente tranquilo. Ideal para familias,
+                parejas y turistas que buscan descanso frente al mar.
+            </p>
 
-            <img src="img/SantaClara.jpg" alt="Imagen de Playa Santa Clara en Coclé" class="side-img">
+            <ul>
+                <li>Aguas tranquilas ideales para bañistas.</li>
+                <li>Cabañas y hospedajes frente al mar.</li>
+                <li>Restaurantes y servicios turísticos cercanos.</li>
+            </ul>
+
+            <p><b>🚗 Cómo llegar</b></p>
+            <ul>
+                <li>Interamericana → Río Hato → Entrada Santa Clara.</li>
+                <li>Acceso bien señalizado.</li>
+                <li>Apto para automóvil sedán sin problemas.</li>
+            </ul>
         </div>
 
-
-
-        <!-- Información 2 -->
-        <div class="contenedor-2">
-            <div class="informacion-p">
-                <h2>Información y ubicación de Playa Santa Clara</h2>
-
-                <b>📌 Ubicación</b>
-                <ul>
-                    <li>Playa Santa Clara se encuentra en la provincia de Coclé, en la costa del Pacífico panameño.</li>
-                    <li>Está situada aproximadamente a 1 hora y 45 minutos de la Ciudad de Panamá por la carretera
-                        Interamericana.</li>
-                    <li>Forma parte del corregimiento de Santa Clara, distrito de Antón.</li>
-                    <li>Es una de las playas más reconocidas de la región por su tranquilidad y ambiente familiar.</li>
-                </ul>
-
-                <b>🌴 ¿Qué ofrece Santa Clara? – Naturaleza y atractivo turístico</b>
-                <p>
-                    Santa Clara destaca por su arena clara, aguas cálidas y un ambiente relajado, ideal para quienes
-                    buscan
-                    descansar frente al mar. Su belleza natural la convierte en un destino popular para familias,
-                    parejas y
-                    turistas nacionales.
-                    Es una playa de oleaje moderado, perfecta para caminar, nadar o simplemente disfrutar del paisaje
-                    costero.
-                </p>
-                <ul>
-                    <li>Aguas tranquilas ideales para bañistas.</li>
-                    <li>Zonas con cabañas, ranchos y hospedajes frente al mar.</li>
-                    <li>Disponibilidad de restaurantes y servicios turísticos cercanos.</li>
-                    <li>Ambiente seguro y familiar.</li>
-                </ul>
-
-                <b>🚗 ¿Cómo llegar?</b>
-                <ul>
-                    <li>Toma la carretera Interamericana desde la Ciudad de Panamá en dirección a Coclé.</li>
-                    <li>Al llegar al área de Río Hato, continúa hasta ver los rótulos de entrada a Playa Santa Clara.
-                    </li>
-                    <li>El acceso principal está bien señalizado y los caminos suelen encontrarse en buenas condiciones.
-                    </li>
-                    <li>Se puede llegar fácilmente en automóvil sedán, aunque algunos alojamientos cuentan con caminos
-                        internos de arena.</li>
-                </ul>
-            </div>
-
-            <div class="galeria">
-                <img src="img/Playasantclara.jpg" alt="Playa Santa Clara en Coclé" class="side-img2">
-                <img src="img/Santaclara2.jpg" alt="Playa Santa Clara en Coclé" class="side-img2">
-                <img src="img/Santaclara3.jpg" alt="Playa Santa Clara en Coclé" class="side-img2">
-            </div>
-        </div>
-
-
-        <!-- Información 3 -->
-        <div class="contenedor-3">
-            <div class="informacion-p left">
-                <h2>Actividades y Recomendaciones</h2>
-
-                <p>
-                    Playa Santa Clara es uno de los destinos playeros más tranquilos y atractivos de Coclé.
-                    Ideal para quienes buscan relajación, actividades al aire libre y disfrutar del mar en un entorno
-                    seguro
-                    y natural.
-                </p>
-
-                <ul>
-                    <!-- Actividad 1 -->
-                    <li><b>1. Disfrutar del mar y nadar</b></li>
-                    <p>
-                        Sus aguas tranquilas son perfectas para nadar, refrescarse y pasar un día relajado en la playa.
-                    </p>
-
-                    <!-- Actividad 2 -->
-                    <li><b>2. Caminatas por la playa</b></li>
-                    <p>
-                        La extensa franja de arena permite largas caminatas mientras disfrutas del sonido de las olas y
-                        el
-                        paisaje costero.
-                    </p>
-
-                    <!-- Actividad 3 -->
-                    <li><b>3. Picnic y descanso bajo los ranchos</b></li>
-                    <p>
-                        Hay áreas con sombra y ranchos donde puedes descansar, leer, compartir con la familia o
-                        simplemente
-                        relajarte frente al mar.
-                    </p>
-
-                    <!-- Actividad 4 -->
-                    <li><b>4. Deportes de playa</b></li>
-                    <ul>
-                        <li>Voleibol</li>
-                        <li>Frisbee</li>
-                        <li>Fútbol playa</li>
-                    </ul>
-
-                    <!-- Actividad 5 -->
-                    <li><b>5. Fotografía</b></li>
-                    <p>
-                        El ambiente tranquilo, el atardecer y el reflejo del sol en la arena blanca hacen de Santa Clara
-                        un
-                        lugar perfecto para fotografías.
-                    </p>
-
-                    <!-- Actividad 6 -->
-                    <li><b>6. Paseos en caballo o cuatrimoto</b></li>
-                    <p>
-                        En temporadas altas, puedes encontrar servicios de paseos en caballo o alquiler de cuatrimotos
-                        cerca
-                        de la zona.
-                    </p>
-
-                    <!-- Actividad 7 -->
-                    <li><b>7. Gastronomía local</b></li>
-                    <p>
-                        En las cercanías encontrarás restaurantes con mariscos frescos, comida del día y opciones
-                        económicas
-                        frente a la playa.
-                    </p>
-
-                    <!-- Recomendaciones -->
-                    <li><b>8. Recomendaciones importantes</b></li>
-                    <ul>
-                        <li>Lleva protector solar, sombrero y suficiente agua.</li>
-                        <li>Si vas en temporada alta, llega temprano para asegurar estacionamiento y espacio con sombra.
-                        </li>
-                        <li>Respeta las áreas designadas y mantén la playa limpia.</li>
-                        <li>No dejes basura; Santa Clara es conocida por su ambiente natural y limpio.</li>
-                    </ul>
-                </ul>
-            </div>
-
-            <div class="galeria">
-                <img src="img/Actividad1S.jpg" alt="Actividades en Santa Clara" class="side-img2">
-                <img src="img/Actividad2S.jpg" alt="Caminatas en Santa Clara" class="side-img2">
-                <img src="img/Actividad3S.jpg" alt="Paseso cuatrimotos" class="side-img2">
-            </div>
+        <div class="galeria-vertical">
+            <img src="img/Playasantclara.jpg" alt="" class="side-img2">
+            <img src="img/Santaclara2.jpg" alt="" class="side-img2">
+            <img src="img/Santaclara3.jpg" alt="" class="side-img2">
         </div>
     </div>
 
-    <!-- Botón destacado a Paquetes -->
-    <div class="boton-paquetes-container">
-        <a href="PaquetesSantaClara.html" class="btn-paquetes">Ver Paquetes Santa Clara</a>
+
+    <!-- BLOQUE 3 -->
+    <div class="bloque-info">
+        <div class="informacion-p2">
+            <h2>Actividades y Recomendaciones</h2>
+
+            <p>
+                Playa Santa Clara es uno de los destinos playeros más tranquilos y atractivos de Coclé.
+                Perfecta para relajación, actividades al aire libre y disfrutar del mar.
+            </p>
+
+            <ul>
+                <li><b>1. Nadar en aguas tranquilas</b></li>
+                <p>Ideal para refrescarse y pasar un día relajado.</p>
+
+                <li><b>2. Caminatas por la playa</b></li>
+                <p>Perfecta para largas caminatas al atardecer.</p>
+
+                <li><b>3. Picnic y descanso bajo ranchos</b></li>
+                <p>Espacios ideales para sombra y relax.</p>
+
+                <li><b>4. Deportes de playa</b></li>
+                <ul>
+                    <li>Voleibol</li>
+                    <li>Frisbee</li>
+                    <li>Fútbol playa</li>
+                </ul>
+
+                <li><b>5. Fotografía</b></li>
+                <p>Atardeceres perfectos para capturar paisajes hermosos.</p>
+
+                <li><b>6. Paseos en caballo o cuatrimoto</b></li>
+                <p>Disponibles en temporada alta.</p>
+
+                <li><b>7. Gastronomía local</b></li>
+                <p>Restaurantes con mariscos frescos y comida local.</p>
+
+                <li><b>8. Recomendaciones</b></li>
+                <ul>
+                    <li>Lleva protector solar y agua.</li>
+                    <li>En temporada alta llega temprano.</li>
+                    <li>Mantén la playa limpia.</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="galeria-vertical">
+            <img src="img/Actividad1S.jpg" alt="" class="side-img2">
+            <img src="img/Actividad2S.jpg" alt="" class="side-img2">
+            <img src="img/Actividad3S.jpg" alt="" class="side-img2">
+        </div>
     </div>
+
+</div>
+
+<!-- Botón de Paquetes -->
+<div class="boton-paquetes-container">
+    <a href="Paquetes.html" class="btn-paquetes">Ver Paquetes Santa Clara</a>
+</div>
+
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="col">
-                <h4>Acerca de</h4>
-                <p>Turismo de Coclé — Promoviendo destinos locales.</p>
-            </div>
-            <div class="col">
-                <h4>Enlaces</h4>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="col">
-                <h4>Contacto</h4>
-                <p>info@cocletour@gmail.com</p>
-                <p>+507 6490-8994</p>
-            </div>
-            <div class="col">
-                <h4>Síguenos</h4>
-                <p>Redes sociales etc etc</p>
-            </div>
-        </div>
-        <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
-    </footer>
+  <footer class="pie-pagina">
+    <div class="container footer-grid">
+      <div class="col">
+        <h4>Acerca de</h4>
+        <p>Turismo de Coclé </p> <p>Promoviendo destinos locales.</p>
+      </div>
+      <div class="col">
+        <h4>Enlaces</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="Contacto.html">Contacto</a></li>
+          <li><a href="Juego.html">Juego</a></li>
+          <li><a href="SobreNosotros.html">Sobre nosotros</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Contacto</h4>
+        <p>info.cocletour@gmail.com</p>
+        <p>+507 6490-8994</p>
+      </div>
+      <div class="col">
+  <h4>Síguenos</h4>
+  <p class="redes">
+    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
 
-    <script src="script.js"></script>
+    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+  </p>
+</div>
+    </div>
+    <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
+  </footer>
+
+  <!-- Chatbot flotante -->
+<!-- Burbuja-icono -->
+<div id="chatbot-bubble">
+    <img src="img/chatbot.png" id="chatbot-icon">
+</div>
+<!-- Ventana del chatbot -->
+<div id="chatbot-window" class="chatbot-window oculto">
+  <div class="chatbot-header">
+    Chat de Ayuda
+    <span id="chatbot-close" style="cursor:pointer; font-weight:bold;">X</span>
+  </div>
+  <div id="chatbot-messages" class="chatbot-messages"></div>
+  <div class="chatbot-input-area">
+    <input id="chatbot-input" type="text" placeholder="Escribe un mensaje...">
+    <button id="chatbot-send">Enviar</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 
 </html>
