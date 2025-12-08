@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acceso</title>
+
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div class="login-box" id="loginBox">
+    <h2>Acceso Administrador / Usuario</h2>
+
+    <label>Usuario</label>
+    <input type="text" id="usuario">
+
+    <label>Contraseña</label>
+    <input type="password" id="contrasena">
+
+    <button id="btnLogin">Iniciar sesión</button>
+
+    <p class="switch-text">
+      ¿No tienes cuenta? <a onclick="mostrarRegistro()">Registrarse</a>
+    </p>
+
+    <div id="msg" class="msg">Credenciales incorrectas</div>
+  </div>
+
+  <!-- REGISTRO -->
+  <div class="login-box oculto" id="registroBox">
+    <h2>Crear Cuenta</h2>
+
+    <label>Usuario</label>
+    <input type="text" id="regUsuario">
+
+    <label>Contraseña</label>
+    <input type="password" id="regContra">
+
+    <button id="btnRegistro">Crear cuenta</button>
+
+    <p class="switch-text">
+      ¿Ya tienes cuenta? <a onclick="mostrarLogin()">Iniciar sesión</a>
+    </p>
+
+    <div id="msgReg" class="msg">Error en el registro</div>
+  </div>
+
+  <script src="login.js"></script>
+  <script src="auth.js"></script>
+  <div id="toast"></div>
+
+</body>
+</html>

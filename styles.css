@@ -169,9 +169,13 @@ img{display:block;max-width:100%;height:auto}
 }
 
 /* acciones de cabecera */
-.acciones-cabecera{ display:flex; align-items:center; gap:.6rem }
-.btn-chat{ background:none; border:1px solid transparent; padding:.4rem; border-radius:8px; cursor:pointer }
-.carrito{ position:relative }
+.acciones-cabecera{ 
+   display: flex;
+  align-items: center;
+  gap: 2rem;
+ }
+
+.carrito{ margin-left: auto; }
 .carrito button{ background:none; border:0; cursor:pointer }
 .desplegable-carrito {
   position: absolute;
@@ -194,11 +198,55 @@ img{display:block;max-width:100%;height:auto}
   pointer-events: auto;
 }
 
+#cartBtn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transform: translateY(3px)
+}
+
+#cartCount {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #F8B400;   
+  color: #0b1720;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  min-width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
 .icono-btn {
   width: 26px;
   height: 26px;
   object-fit: contain;
   vertical-align: middle;
+}
+
+.cerrar-sesion button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.cerrar-sesion .icono-btn {
+  width: 28px;
+  height: 28px;
+}
+
+.cerrar-sesion button:hover .icono-btn {
+  transform: scale(1.08);
+  transition: 0.2s;
 }
 
 
@@ -393,13 +441,14 @@ img{display:block;max-width:100%;height:auto}
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
   margin-top: .8rem;
+  
 }
 
 /* Tarjeta individual */
 .tarjeta {
   background: var(--superficie);
   border-radius: var(--radio);
-  padding: 0; 
+  padding: 12px 14px; 
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(11,17,32,0.06); 
   transition: transform .18s ease, box-shadow .18s ease;
@@ -416,11 +465,11 @@ img{display:block;max-width:100%;height:auto}
 /* Imagen superior */
 .tarjeta img {
   width: 100%;
-  height: 160px;       
+  height: 180px;       
   object-fit: cover;
   display: block;
-  border-top-left-radius: var(--radio);
-  border-top-right-radius: var(--radio);
+   border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 /* Contenido interno */
@@ -485,7 +534,8 @@ background: #D99A00;
 .paquetes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.2rem;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
 }
 
 .paquetes .paquete-card {
@@ -520,6 +570,23 @@ background: #D99A00;
   font-size: .95rem;
 }
 
+.paquete-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+
+}
+
+.paquete-content {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+ 
 /* Price destacado */
 .paquete-card .price {
   font-weight: 700;
@@ -681,189 +748,6 @@ background: #D99A00;
   .tarjetas-grid{ grid-template-columns:1fr }
   .cabecera .header-grid{ padding:.5rem }
   .diapo{ height:180px }
-}
-
-/*============ Style De picachos de Ola ===============*/
-/*=========== Style de parque omar torrijos ============*/
-/*=========== Style de Santa clara ============*/
-.imagen-con-titulo{
-  position: relative; 
-  width: 100%;
-  max-height: 400px;
-  overflow: hidden;
-}
-.imagen-con-titulo img{
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 290px;
-  object-fit: cover;
-}
-.imagen-con-titulo h1{
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2.5em;
-  font-family: Inter, system-ui, Arial, sans-serif;
-  font-weight: bold;
-  text-align: center;
-  text-shadow:2px 2px 8px rgb(0,0,0,0,7);
-  padding: 0px 10px;
-  white-space: nowrap;
-}
-
-/* div de informacion.p*/
-.contenedor-principal{
-  display: flex;
-  flex-direction: column;
-  gap: 60px; /* espacio entre secciones */
-  margin: 40px;
-}
-
-.contenedor-1,.contenedor-2, .contenedor-3{
-  display: grid;
-  grid-template-columns: 1fr 350px;
-  align-items: stretch;
-  gap: 8px;
-  margin: 40px;
-}
-
-.informacion-p{
-  flex: 1; 
-  max-width: none;
-  margin: 40px auto;
-  padding: 10px 15px;
-  background: #f0f5f2; 
-  border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-  color: #060707;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: justify;
-}
-
-.informacion-p.left{
-  text-align: left;
-}
-
-/*Estilo del boton que redirige al Paquetes picachos*/
-.boton-paquetes-container {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.btn-paquetes {
-    display: inline-block;
-    padding: 15px 30px;
-    background: linear-gradient(90deg, #28a745, #1e7e34);
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 50px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-
-.btn-paquetes:hover {
-    background: linear-gradient(90deg, #1a742f, #28a745);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-/*Imagen a un lado de la div*/
-.side-img{
-  align-items: flex-start;
-  width: 350px; /* tamaño de la imagen al lado */
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  margin-left: 0px ;
-}
-/*Galeria a la izquierda de Paque omar*/
-.galeria {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* todas a la izquierda */
-}
-
-.side-img2 {
-  width: 350px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  margin-bottom: 15px;
-  margin-left: 0px;
-}
-/*Efectos en la imagenes ZOOM ´+ LEVANATAR*/
-.side-img2, .side-img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.side-img2:hover, .side-img:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 22px rgba(0,0,0,0.35);
-}
-
-/*Estilo de paquetes de picachos + santa clara + parque omar torrijos*/
-.contenedor-paquetes {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-.contenedor-paquetes h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    color: #064635;
-}
-
-.paquete-card {
-    display: flex;
-    gap: 20px;
-    background: #f0f5f2;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-
-.paquete-card img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.paquete-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.paquete-info input {
-    width: 70px;
-    padding: 5px;
-}
-
-.agregar-btn {
-    padding: 8px 12px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.agregar-btn:hover {
-    background-color: #218838;
 }
 
 /* Modal fondo */
@@ -1283,6 +1167,106 @@ input.invalid, textarea.invalid {
   border: 2px solid #e63946 !important;
   background: #ffeaea;
 }
+/* Modal de notificaciones */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease, backdrop-filter .25s ease;
+}
+
+.modal.mostrar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-contenido {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  text-align: center;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.2);
+  transform: scale(.85) translate(10px);
+  transition: transform .25s ease;
+}
+
+.modal.mostrar .modal-contenido {
+  transform: scale(1) translateY(0);
+}
+
+/* Icono */
+.icono {
+  display: inline-block;
+  font-size: 3rem;
+  margin-bottom: .5rem;
+}
+
+/* Botón cerrar */
+.btn-cerrar {
+  margin-top: 1rem;
+  padding: .7rem 1.5rem;
+  background: #0b6b5a;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background .2s;
+}
+
+.btn-cerrar:hover {
+  background: #0e8a73;
+}
+
+/* Colores dinámicos */
+.exito {
+  color: #0b6b5a;
+}
+
+.error {
+  color: #d63636;
+}
+
+.custom-popup {
+  position: fixed;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0b1720;
+  color: white;
+  padding: 1rem 1.6rem;
+  border-radius: 12px;
+  font-weight: bold;
+  opacity: 0;
+  transition: all .35s ease;
+  z-index: 9999;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.custom-popup.show {
+  top: 25px;
+  opacity: 1;
+}
+
+/* Éxito */
+.custom-popup.success {
+  background:#0b6b5a;
+}
+
+/* Error */
+.custom-popup.error {
+  background:#b00020;
+}
+
 
 /* Pra que sea responsivo */
 @media (max-width: var(--breakpoint-resp)){
@@ -1303,3 +1287,213 @@ input.invalid, textarea.invalid {
 
 body{
   background:#E4F7F1;} /* Para asegurar el color de fondo*/
+
+
+/* ESTILOS DE SOBRE NOSOTROS */
+
+
+/* =======================================================
+   HERO PARALLAX
+   ======================================================= */
+.hero {
+  background: url("img/Parque-sobreNosotros.png") center/cover no-repeat fixed;
+  height: 85vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-contenido {
+  position: relative;
+  text-align: center;
+  color:#ffffff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+
+/* =======================================================
+   GRID INFORMACIÓN
+   ======================================================= */
+
+.seccion-info {
+  margin: 3rem 0; /* separa arriba y abajo */
+  padding: 0 1.5rem; /* Separa de los laterales*/
+}
+
+.grid-info {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+
+.tarjeta-sobre h2 {
+  margin-top: 0;
+  color: #0b6b5a;
+}
+
+.tarjeta-sobre ul {
+  padding-left: 1rem;
+}
+
+.tarjeta-sobre li {
+  margin-bottom: .5rem;
+}
+
+
+.tarjeta-sobre {
+  background:#ffffff;
+  padding: 1.8rem;
+  border-radius: 14px;
+  box-shadow: 0 8px  24px rgb(2, 6,23,0.1);
+  border-left: 6px solid #F8B400;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.tarjeta-sobre:hover {
+  transform: translateY(-6px); /* se levanta */
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.20); /* sombra más fuerte */
+} 
+
+
+
+/* =======================================================
+   CTA FINAL
+   ======================================================= */
+.cta {
+  background:#ffffff;
+  color: #0b1720;
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 4rem auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(2, 6, 23, 0.1);
+  border-left: 6px solid #F8B400;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.20);
+}
+
+.cta p {
+  max-width: 700px;
+  margin: auto;
+  opacity: .9;
+}
+
+.btn-cta {
+  display: inline-block;
+  margin-top: 1.8rem;
+  padding: .9rem 2rem;
+  background: #0b6b5a;
+  color:#ffffff;
+  font-weight: bold;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: .3s ease;
+}
+
+.btn-cta:hover {
+  background: #0e8a73;
+}
+
+/*Burbuja*/
+#chatbot-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background: #00c49a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  z-index: 999998;
+}
+
+#chatbot-bubble img {
+  width: 65%;
+  height: 65%;
+}
+
+#chatbot-window {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  width: 320px;
+  height: 400px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  overflow: hidden;
+  z-index: 999999;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.chatbot-header {
+  background: #018f7f;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chatbot-input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+#chatbot-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+#chatbot-send {
+  background: #018f7f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+

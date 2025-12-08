@@ -44,6 +44,7 @@
               <li><a href="SantaClara.html">Playa Santa Clara</a></li>
             </ul>
           </li>
+          <li><a href="Paquetes.html">Paquetes</a></li>
           <li><a href="Juego.html">Juego</a></li>
           <li><a href="Contacto.html">Contacto</a></li>
           <li><a href="SobreNosotros.html">Sobre nosotros</a></li>
@@ -51,10 +52,6 @@
       </nav>
 
       <div class="acciones-cabecera">
-        <button id="openChat" class="btn-chat" title="Abrir chat">
-       <img src="img/chatbot.png" alt="Chat" class="icono-btn">
-      </button>
-
         <div class="carrito" id="cartWidget" aria-live="polite">
           <button id="cartBtn" aria-haspopup="true" aria-expanded="false">
           <img src="img/carrito.png" alt="Carrito" class="icono-btn">
@@ -67,6 +64,11 @@
               <button id="checkout" class="btn primario">Finalizar Compra</button>
             </div>
           </div>
+        </div>
+            <div class="cerrar-sesion" id="logoutBtn">
+           <button>
+            <img src="img/salir.png" alt="Cerrar sesión" class="icono-btn">
+         </button>
         </div>
       </div>
     </div>
@@ -114,7 +116,7 @@
         </article>
 
         <article class="tarjeta">
-          <img src="img/Parque.jpeg" alt="Parque Omar Torrijos — El Copé" />
+          <img src="img/Parque.jpeg" alt="Parque Omar Torrijos" />
           <h3>Parque Omar Torrijos</h3>
           <p>Reserva natural con biodiversidad y rutas ecológicas.</p>
           <a href="ParqueOmar.html" class="btn">Más</a>
@@ -129,33 +131,37 @@
       </div>
     </section>
 
-    <!-- Paquetes -->
-    <section class="paquetes container" id="paquetes">
-      <h2>Paquetes populares</h2>
-      <div class="paquetes-grid">
-        <div class="paquete-card">
-          <h3>Escapada de Aventura</h3>
-          <p>2 días · Transporte incluido</p>
-          <div class="price">$120.00</div>
-          <button class="btn comprar" data-id="p1" data-name="Escapada de Aventura" data-price="120">Comprar</button>
-        </div>
+<!-- Paquetes -->
+<section class="paquetes container" id="paquetes">
+  <h2>Paquetes populares</h2>
+  <div class="paquetes-grid">
 
-        <div class="paquete-card">
-          <h3>Relax en la Playa</h3>
-          <p>3 días · Hotel 3 estrellas</p>
-          <div class="price">$200.00</div>
-          <button class="btn comprar" data-id="p2" data-name="Relax en la Playa" data-price="200">Comprar</button>
-        </div>
+    <div class="paquete-card">
+      <img src="img/Actividad1.png" alt="Escapada de Aventura" class="paquete-img">
+      <h3>Escapada de Aventura</h3>
+      <p>2 días · Transporte incluido</p>
+      <div class="price">$120.00</div>
+      <a href="Paquetes.html" class="btn">Ver</a>
+    </div>
 
-        <div class="paquete-card">
-          <h3>Tour Cultural</h3>
-          <p>1 día · Guía local</p>
-          <div class="price">$60.00</div>
-          <button class="btn comprar" data-id="p3" data-name="Tour Cultural" data-price="60">Comprar</button>
-        </div>
-      </div>
-    </section>
+    <div class="paquete-card">
+      <img src="img/Actividad1S.jpg" alt="Relax en la Playa" class="paquete-img">
+      <h3>Relax en la Playa</h3>
+      <p>3 días · Hotel 3 estrellas</p>
+      <div class="price">$200.00</div>
+      <a href="Paquetes.html" class="btn">Ver</a>
+    </div>
 
+    <div class="paquete-card">
+      <img src="img/Actividad3S.jpg" alt="Tour Cultural" class="paquete-img">
+      <h3>Tour Cultural</h3>
+      <p>1 día · Guía local</p>
+      <div class="price">$60.00</div>
+      <a href="Paquetes.html" class="btn">Ver</a>
+    </div>
+  </div>
+
+</section>
     <!-- Llamado a la acción -->
     <section class="llamado container">
       <div class="contenedor-llamado">
@@ -208,8 +214,36 @@
     </div>
     <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
   </footer>
-  
+
+  <!-- Chatbot flotante -->
+<!-- Burbuja-icono -->
+<div id="chatbot-bubble">
+    <img src="img/chatbot.png" id="chatbot-icon">
+</div>
+<!-- Ventana del chatbot -->
+<div id="chatbot-window" class="chatbot-window oculto">
+  <div class="chatbot-header">
+    Chat de Ayuda
+    <span id="chatbot-close" style="cursor:pointer; font-weight:bold;">X</span>
+  </div>
+  <div id="chatbot-messages" class="chatbot-messages"></div>
+  <div class="chatbot-input-area">
+    <input id="chatbot-input" type="text" placeholder="Escribe un mensaje...">
+    <button id="chatbot-send">Enviar</button>
+  </div>
+</div>
+
   <script src="script.js"></script>
+  <script src="chatbot.js"></script>
+
+<script>
+  const sesion = JSON.parse(sessionStorage.getItem("sesion"));
+
+  // Si NO está logueado, lo mandamos al login
+  if (!sesion) {
+      window.location.href = "login.html";
+  }
+</script>
 </body>
 
 </html>

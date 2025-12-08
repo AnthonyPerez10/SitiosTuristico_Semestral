@@ -1,0 +1,102 @@
+/* === TUS ESTILOS ORIGINALES (NO CAMBIADOS) === */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg,#E4F7F1,#F9FBFA);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.login-box {
+  background: #fff;
+  padding: 28px;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  position: absolute;
+  transition: all .35s ease;
+}
+
+h2 {
+  margin: 0;
+  margin-bottom: 14px;
+  color: #0b6b5a;
+  text-align: center;
+}
+
+label { font-size: .9rem; font-weight: 600; }
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 14px;
+  border-radius: 10px;
+  border: 1px solid #cfd8d3;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #0b6b5a;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover { background: #0e8a73; }
+
+.msg {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #c0392b;
+  display: none;
+}
+
+/* === SOLO LO NUEVO PARA ANIMAR LOGIN/REGISTRO === */
+.oculto {
+  opacity: 0;
+  transform: scale(.9);
+  pointer-events: none;
+}
+
+.switch-text {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.switch-text a {
+  color: #0b6b5a;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ====== TOAST (NOTIFICACIÓN ARRIBA) ====== */
+#toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-weight: bold;
+  color: #333;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+  z-index: 9999;
+}
+
+#toast.mostrar {
+  opacity: 1;
+  transform: translateX(-50%) translateY(5px);
+}
