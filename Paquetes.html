@@ -60,166 +60,206 @@
     </div>
   </header>
 
-  
- <!-- SECCIÓN 1: PARQUE OMAR -->
-  <section id="parque-omar">
+  <!-- SECCIÓN 1: PARQUE OMAR -->
+<section id="parque-omar">
 
-    <!-- HERO 1-->
-<section class="hero hero-1">
-  <div class="hero-contenido">
-    <h1>Parque Omar Torrijos Herrera </h1>
-    <p>Historia, tradición y cultura</p>
-  </div>
-</section>
-
-    <main class="paquetes-wrapper">
-        <h2>Elige tu paquete</h2>
-
-        <!-- Paquete 1 -->
-        <div class="paquete-item">
-            <img src="img/TrasportePaquete.png" class="paquete-img">
-            <div class="info-paquete">
-                <h3>Paquete Completo</h3>
-                <p>
-                    Incluye transporte ida y vuelta, caminata guiada y tiempo para fotos.
-                    <b>$85 por persona</b>
-                </p>
-                <label for="cantidad3">Cantidad:</label>
-                <input type="number" id="cantidad3" min="1" value="1">
-                <button class="agregar-btn" data-nombre="Paquete Completo" data-precio="85">Agregar al carrito</button>
-            </div>
-        </div>
-
-        <!-- Paquete 2 -->
-        <div class="paquete-item">
-            <img src="img/TrasportePaquete2.jpg" class="paquete-img">
-            <div class="info-paquete">
-                <h3>Experiencia Premium</h3>
-                <p>
-                    Transporte + guía + almuerzo + hidratación + fotografía.
-                    <b>$145 por persona</b>
-                </p>
-                <label for="cantidad4">Cantidad:</label>
-                <input type="number" id="cantidad4" min="1" value="1">
-                <button class="agregar-btn" data-nombre="Experiencia Premium" data-precio="145">Agregar al carrito</button>
-            </div>
-        </div>
-
-        <!-- Paquete 3 -->
-        <div class="paquete-item">
-            <img src="img/SenderismoPaquete.jpeg" class="paquete-img">
-            <div class="info-paquete">
-                <h3>Senderismo Interno</h3>
-                <p>Guía local + miradores + recorrido completo. <b>$30</b></p>
-
-                <label for="cantidad5">Cantidad:</label>
-                <input type="number" id="cantidad5" min="1" value="1">
-
-                <button class="agregar-btn" data-nombre="Senderismo Interno" data-precio="30">Agregar al carrito</button>
-            </div>
-        </div>
-    </main>
-
-  </section>
-   <!--SECCIÓN 2: PICACHOS DE OLÁ -->
-  <section id="picachos">
-
-    <!-- HERO 2  -->
-<section class="hero hero-2">
-  <div class="hero-contenido">
-    <h1>Picachos de Ola</h1>
-    <p>Aventura y naturaleza</p>
-  </div>
-</section>
-
-    <main class="paquetes-wrapper">
-        <h2>Elige tu paquete</h2>
-
-        <!-- Paquete 1 -->
-        <div class="paquete-item">
-            <img src="img/PichachosOlaF.jpg" class="paquete-img">
-            <div class="info-paquete">
-                <h3>Tour Básico</h3>
-                <p>$45 por persona.</p>
-                <label for="cantidad1">Cantidad:</label>
-                <input type="number" id="cantidad1" min="1" value="1">
-                <button class="agregar-btn" data-nombre="Tour Básico" data-precio="45">Agregar</button>
-            </div>
-        </div>
-
-        <!-- Paquete 2 -->
-        <div class="paquete-item">
-            <img src="img/Actividad.jpg" class="paquete-img">
-            <div class="info-paquete">
-                <h3>Tour + Cascadas</h3>
-                <p>$60 por persona.</p>
-                <label for="cantidad2">Cantidad:</label>
-                <input type="number" id="cantidad2" min="1" value="1">
-                <button class="agregar-btn" data-nombre="Tour + Cascadas" data-precio="60">Agregar</button>
-            </div>
-        </div>
-    </main>
-
+  <!-- HERO 1 -->
+  <section class="hero hero-1">
+    <div class="hero-contenido">
+      <h1>Parque Omar Torrijos Herrera</h1>
+      <p>Historia, tradición y cultura</p>
+    </div>
   </section>
 
-  <!-- SECCIÓN 3: SANTA CLARA -->
-  <section id="santa-clara">
+  <main class="paquetes-wrapper">
+    <h2>Elige tu paquete</h2>
 
-    <section class="hero hero-3">
-  <div class="hero-contenido">
-    <h1>Playa Santa Clara</h1>
-    <p>Sol, arena y diversión asegurada</p>
-  </div>
+    <!-- Paquete 1 -->
+    <div class="paquete-item">
+      <img src="img/TrasportePaquete.png" class="paquete-img">
+      <div class="info-paquete">
+        <h3>Paquete Completo</h3>
+        <p>
+          Incluye transporte ida y vuelta, caminata guiada y tiempo para fotos.
+          <b>$85 por persona</b>
+        </p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete3" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete3"
+          data-nombre="Paquete Completo"
+          data-precio="85">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- Paquete 2 -->
+    <div class="paquete-item">
+      <img src="img/TrasportePaquete2.jpg" class="paquete-img">
+      <div class="info-paquete">
+        <h3>Experiencia Premium</h3>
+        <p>
+          Transporte + guía + almuerzo + hidratación + fotografía.
+          <b>$145 por persona</b>
+        </p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete4" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete4"
+          data-nombre="Experiencia Premium"
+          data-precio="145">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- Paquete 3 -->
+    <div class="paquete-item">
+      <img src="img/SenderismoPaquete.jpeg" class="paquete-img">
+      <div class="info-paquete">
+        <h3>Senderismo Interno</h3>
+        <p>Guía local + miradores + recorrido completo. <b>$30</b></p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete5" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete5"
+          data-nombre="Senderismo Interno"
+          data-precio="30">Agregar al carrito</button>
+      </div>
+    </div>
+  </main>
+
 </section>
 
-    <main class="paquetes-wrapper">
-        <h2>Elige tu paquete</h2>
+<section id="picachos">
 
-        <!-- 4 paquetes -->
-
-        <div class="paquete-item">
-            <img src="img/PaqueteSantaclara1.jpg" class="paquete-img2">
-            <div class="info-paquete">
-                <h3>Paquete Básico</h3>
-                <p>
-                    Incluye acceso a Playa Santa Clara, uso de ranchos, baños y área social.
-                    Ideal para quienes llegan en vehículo propio.
-                    <b>$15 por persona.</b></p>
-                <label for="cantidad8">Cantidad:</label>
-                <input type="number" id="cantidad8" min="1" value="1">
-                <button class="agregar-btn" data-nombre="Paquete Básico" data-precio="15">Agregar</button>
-            </div>
-        </div>
-
-
-        <div class="paquete-item">
-            <img src="img/PaqueteSantaclara3.jpg" class="paquete-img2">
-            <div class="info-paquete">
-                <h3>Full Playa</h3>
-                <p> Transporte ida y vuelta + acceso a playa + rancho reservado + almuerzo (pescado o pollo)
-                    + bebidas + silla de playa.
-                    <b>$55 por persona.</b>
-                </p>
-                <label for="cantidad10">Cantidad:</label>
-                <input type="number" id="cantidad10" min="1" value="1">
-                <button class="agregar-btn" data-nombre="Full Playa" data-precio="55">Agregar</button>
-            </div>
-        </div>
-
-        <div class="paquete-item">
-            <img src="img/PaqueteSantaclara4.jpg" class="paquete-img2">
-            <div class="info-paquete">
-                <h3>Cabaña Frente al Mar</h3>
-                <p>Incluye cabaña privada para 2 a 4 personas, aire acondicionado, baño interno,
-                    acceso privado a playa y estacionamiento.
-                    <b>$120 por noche.</b></p>
-                <label for="cantidad11">Noches:</label>
-                <input type="number" id="cantidad11" min="1" value="1">
-                <button class="agregar-btn" data-nombre="Cabaña Frente al Mar" data-precio="120">Agregar</button>
-            </div>
-        </div>
-    </main>
+  <!-- HERO 2 -->
+  <section class="hero hero-2">
+    <div class="hero-contenido">
+      <h1>Picachos de Ola</h1>
+      <p>Aventura y naturaleza</p>
+    </div>
   </section>
+
+  <main class="paquetes-wrapper">
+    <h2>Elige tu paquete</h2>
+
+    <!-- Paquete 1 -->
+    <div class="paquete-item">
+      <img src="img/PichachosOlaF.jpg" class="paquete-img">
+      <div class="info-paquete">
+        <h3>Tour Básico</h3>
+        <p>$45 por persona.</p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete1" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete1"
+          data-nombre="Tour Básico"
+          data-precio="45">Agregar</button>
+      </div>
+    </div>
+
+    <!-- Paquete 2 -->
+    <div class="paquete-item">
+      <img src="img/Actividad.jpg" class="paquete-img">
+      <div class="info-paquete">
+        <h3>Tour + Cascadas</h3>
+        <p>$60 por persona.</p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete2" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete2"
+          data-nombre="Tour + Cascadas"
+          data-precio="60">Agregar</button>
+      </div>
+    </div>
+  </main>
+
+</section>
+
+<section id="santa-clara">
+
+  <section class="hero hero-3">
+    <div class="hero-contenido">
+      <h1>Playa Santa Clara</h1>
+      <p>Sol, arena y diversión asegurada</p>
+    </div>
+  </section>
+
+  <main class="paquetes-wrapper">
+    <h2>Elige tu paquete</h2>
+
+    <!-- Paquete 1 -->
+    <div class="paquete-item">
+      <img src="img/PaqueteSantaclara1.jpg" class="paquete-img2">
+      <div class="info-paquete">
+        <h3>Paquete Básico</h3>
+        <p>
+          Incluye acceso a Playa Santa Clara, uso de ranchos, baños y área social.
+          Ideal para quienes llegan en vehículo propio.
+          <b>$15 por persona.</b>
+        </p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete8" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete8"
+          data-nombre="Paquete Básico"
+          data-precio="15">Agregar</button>
+      </div>
+    </div>
+
+    <!-- Paquete 2 -->
+    <div class="paquete-item">
+      <img src="img/PaqueteSantaclara3.jpg" class="paquete-img2">
+      <div class="info-paquete">
+        <h3>Full Playa</h3>
+        <p>
+          Transporte ida y vuelta + acceso a playa + rancho reservado + almuerzo + bebidas.
+          <b>$55 por persona.</b>
+        </p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete10" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete10"
+          data-nombre="Full Playa"
+          data-precio="55">Agregar</button>
+      </div>
+    </div>
+
+    <!-- Paquete 3 -->
+    <div class="paquete-item">
+      <img src="img/PaqueteSantaclara4.jpg" class="paquete-img2">
+      <div class="info-paquete">
+        <h3>Cabaña Frente al Mar</h3>
+        <p>
+          Incluye cabaña privada para 2 a 4 personas, aire acondicionado, baño interno,
+          acceso privado a playa.
+          <b>$120 por noche.</b>
+        </p>
+
+        <label>Noches:</label>
+        <input type="number" id="cant_paquete11" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete11"
+          data-nombre="Cabaña Frente al Mar"
+          data-precio="120">Agregar</button>
+      </div>
+    </div>
+
+  </main>
+</section>
 
     <!-- Footer -->
   <footer class="pie-pagina">
@@ -282,6 +322,7 @@
 
   <script src="script.js"></script>
   <script src="chatbot.js"></script>
+<script src="carrito.js"></script>
 
 </body>
 </html>

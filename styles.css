@@ -192,12 +192,6 @@ img{display:block;max-width:100%;height:auto}
   transition: opacity .18s ease, transform .18s ease;
 }
 
-.carrito:hover .desplegable-carrito {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
 #cartBtn {
   position: relative;
   background: none;
@@ -223,6 +217,28 @@ img{display:block;max-width:100%;height:auto}
   line-height: 18px;
   pointer-events: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.modal-compra {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal-contenido {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  animation: pop .25s ease;
+}
+@keyframes pop {
+  0% { transform: scale(.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 .icono-btn {

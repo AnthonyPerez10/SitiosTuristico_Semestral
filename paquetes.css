@@ -11,8 +11,6 @@
     margin-bottom: 30px;
 }
 
-
-
 /* Tarjetas – Más amplias */
 .paquete-item {
     display: flex;
@@ -30,8 +28,6 @@
     box-shadow: 0 12px 28px rgba(0,0,0,0.18);
 }
 
-
-
 /* Imagen lateral */
 .paquete-img,
 .paquete-img2 {
@@ -41,8 +37,6 @@
     border-radius: 16px;
     flex-shrink: 0; /* Para que nunca se deforme */
 }
-
-
 
 /* Info */
 .info-paquete {
@@ -62,8 +56,6 @@
     margin-bottom: 18px;
 }
 
-
-
 /* Inputs + botón */
 .info-paquete label {
     font-weight: bold;
@@ -78,7 +70,7 @@
     font-size: 1rem;
 }
 
-.agregar-btn {
+.agregar-carrito {
     background-color: #ff7b00;
     border: none;
     padding: 14px 20px;
@@ -91,7 +83,7 @@
     transition: background .2s, transform .15s;
 }
 
-.agregar-btn:hover {
+.agregar-carrito:hover {
     background-color: #ff8f1c;
     transform: scale(1.03);
 }
