@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
@@ -55,6 +54,7 @@
             </div>
           </div>
         </div>
+
         <div class="cerrar-sesion" id="logoutBtn">
           <button>
             <img src="img/salir.png" alt="Cerrar sesión" class="icono-btn">
@@ -65,268 +65,261 @@
   </header>
 
 
-  <!-- SECCIÓN 1: PARQUE OMAR -->
-  <section id="parque-omar">
+<!-- ======================
+    SECCIÓN: PARQUE OMAR
+======================= -->
 
-    <!-- HERO 1-->
-    <section class="hero hero-1">
-      <div class="hero-contenido">
-        <h1>Parque Omar Torrijos Herrera </h1>
-        <p>Historia, tradición y cultura</p>
-      </div>
-    </section>
-    <main class="paquetes-wrapper"></main>
+<section id="parque-omar">
+
+  <section class="hero hero-1">
+    <div class="hero-contenido">
+      <h1>Parque Omar Torrijos Herrera</h1>
+      <p>Historia, tradición y cultura</p>
+    </div>
+  </section>
+
+  <main class="paquetes-wrapper">
     <h2>Elige tu paquete</h2>
 
-    <!--<div id="paquetes-dinamicos"></div>-->
-
-    <!-- Para administrar mis paquetes desde su pagina-->
-    <div id="ListaPaquetes"></div>
-
-    <!-- Paquete 1 -->
     <div class="paquete-item">
       <img src="img/TrasportePaquete.png" class="paquete-img">
       <div class="info-paquete">
         <h3>Paquete Completo</h3>
-        <p>
-          Incluye transporte ida y vuelta, caminata guiada y tiempo para fotos.
+        <p>Incluye transporte ida y vuelta, caminata guiada y tiempo para fotos.
           <b>$85 por persona</b>
         </p>
-        <label for="cantidad3">Cantidad:</label>
-        <input type="number" id="cantidad3" min="1" value="1">
-        <button class="agregar-btn" data-nombre="Paquete Completo" data-precio="85">Agregar al carrito</button>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete3" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete3"
+          data-nombre="Paquete Completo"
+          data-precio="85">Agregar al carrito</button>
       </div>
     </div>
 
-    <!-- Paquete 2 -->
     <div class="paquete-item">
       <img src="img/TrasportePaquete2.jpg" class="paquete-img">
       <div class="info-paquete">
         <h3>Experiencia Premium</h3>
-        <p>
-          Transporte + guía + almuerzo + hidratación + fotografía.
+        <p>Transporte + guía + almuerzo + hidratación + fotografía.
           <b>$145 por persona</b>
         </p>
-        <label for="cantidad4">Cantidad:</label>
-        <input type="number" id="cantidad4" min="1" value="1">
-        <button class="agregar-btn" data-nombre="Experiencia Premium" data-precio="145">Agregar al carrito</button>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete4" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete4"
+          data-nombre="Experiencia Premium"
+          data-precio="145">Agregar al carrito</button>
       </div>
     </div>
 
-    <!-- Paquete 3 -->
     <div class="paquete-item">
       <img src="img/SenderismoPaquete.jpeg" class="paquete-img">
       <div class="info-paquete">
         <h3>Senderismo Interno</h3>
-        <p>Guía local + miradores + recorrido completo. <b>$30</b></p>
-
-        <label for="cantidad5">Cantidad:</label>
-        <input type="number" id="cantidad5" min="1" value="1">
-
-        <button class="agregar-btn" data-nombre="Senderismo Interno" data-precio="30">Agregar al carrito</button>
-      </div>
-    </div>
-    <div id="paquetes-dinamicos-parque-omar"></div>
-    </main>
-
-  </section>
-  <!--SECCIÓN 2: PICACHOS DE OLÁ -->
-  <section id="picachos">
-
-    <!-- HERO 2  -->
-    <section class="hero hero-2">
-      <div class="hero-contenido">
-        <h1>Picachos de Ola</h1>
-        <p>Aventura y naturaleza</p>
-      </div>
-    </section>
-
-    <main class="paquetes-wrapper">
-      <h2>Elige tu paquete</h2>
-
-      <!-- Paquete 1 -->
-      <div class="paquete-item">
-        <img src="img/PichachosOlaF.jpg" class="paquete-img">
-        <div class="info-paquete">
-          <h3>Tour Básico</h3>
-          <p>$45 por persona.</p>
-          <label for="cantidad1">Cantidad:</label>
-          <input type="number" id="cantidad1" min="1" value="1">
-          <button class="agregar-btn" data-nombre="Tour Básico" data-precio="45">Agregar</button>
-        </div>
-      </div>
-
-      <!-- Paquete 2 -->
-      <div class="paquete-item">
-        <img src="img/Actividad.jpg" class="paquete-img">
-        <div class="info-paquete">
-          <h3>Tour + Cascadas</h3>
-          <p>$60 por persona.</p>
-          <label for="cantidad2">Cantidad:</label>
-          <input type="number" id="cantidad2" min="1" value="1">
-          <button class="agregar-btn" data-nombre="Tour + Cascadas" data-precio="60">Agregar</button>
-        </div>
-      </div>
-      <!-- Contenedor dinámico para nuevos paquetes -->
-      <div id="paquetes-dinamicos-picachos"></div>
-    </main>
-
-  </section>
-
-  <!-- SECCIÓN 3: SANTA CLARA -->
-  <section id="santa-clara">
-
-    <section class="hero hero-3">
-      <div class="hero-contenido">
-        <h1>Playa Santa Clara</h1>
-        <p>Sol, arena y diversión asegurada</p>
-      </div>
-    </section>
-
-    <main class="paquetes-wrapper">
-      <h2>Elige tu paquete</h2>
-
-      <!-- 4 paquetes -->
-
-      <div class="paquete-item">
-        <img src="img/PaqueteSantaclara1.jpg" class="paquete-img2">
-        <div class="info-paquete">
-          <h3>Paquete Básico</h3>
-          <p>
-            Incluye acceso a Playa Santa Clara, uso de ranchos, baños y área social.
-            Ideal para quienes llegan en vehículo propio.
-            <b>$15 por persona.</b>
-          </p>
-          <label for="cantidad8">Cantidad:</label>
-          <input type="number" id="cantidad8" min="1" value="1">
-          <button class="agregar-btn" data-nombre="Paquete Básico" data-precio="15">Agregar</button>
-        </div>
-      </div>
-
-
-      <div class="paquete-item">
-        <img src="img/PaqueteSantaclara3.jpg" class="paquete-img2">
-        <div class="info-paquete">
-          <h3>Full Playa</h3>
-          <p> Transporte ida y vuelta + acceso a playa + rancho reservado + almuerzo (pescado o pollo)
-            + bebidas + silla de playa.
-            <b>$55 por persona.</b>
-          </p>
-          <label for="cantidad10">Cantidad:</label>
-          <input type="number" id="cantidad10" min="1" value="1">
-          <button class="agregar-btn" data-nombre="Full Playa" data-precio="55">Agregar</button>
-        </div>
-      </div>
-
-      <div class="paquete-item">
-        <img src="img/PaqueteSantaclara4.jpg" class="paquete-img2">
-        <div class="info-paquete">
-          <h3>Cabaña Frente al Mar</h3>
-          <p>Incluye cabaña privada para 2 a 4 personas, aire acondicionado, baño interno,
-            acceso privado a playa y estacionamiento.
-            <b>$120 por noche.</b>
-          </p>
-          <label for="cantidad11">Noches:</label>
-          <input type="number" id="cantidad11" min="1" value="1">
-          <button class="agregar-btn" data-nombre="Cabaña Frente al Mar" data-precio="120">Agregar</button>
-        </div>
-      </div>
-      <!-- Contenedor dinámico para nuevos paquetes -->
-      <div id="paquetes-dinamicos-santa-clara"></div>
-    </main>
-  </section>
-
-  <!-- Footer -->
-  <footer class="pie-pagina">
-    <div class="container footer-grid">
-      <div class="col">
-        <h4>Acerca de</h4>
-        <p>Turismo de Coclé </p>
-        <p>Promoviendo destinos locales.</p>
-      </div>
-      <div class="col">
-        <h4>Enlaces</h4>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="Contacto.html">Contacto</a></li>
-          <li><a href="Juego.html">Juego</a></li>
-          <li><a href="SobreNosotros.html">Sobre nosotros</a></li>
-        </ul>
-      </div>
-      <div class="col">
-        <h4>Contacto</h4>
-        <p>info.cocletour@gmail.com</p>
-        <p>+507 6490-8994</p>
-      </div>
-      <div class="col">
-        <h4>Síguenos</h4>
-        <p class="redes">
-          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-
-          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-
-          <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
+        <p>Guía local + miradores + recorrido completo.
+          <b>$30</b>
         </p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete5" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete5"
+          data-nombre="Senderismo Interno"
+          data-precio="30">Agregar al carrito</button>
       </div>
     </div>
-    <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
-  </footer>
 
-  <!-- Chatbot flotante -->
-  <!-- Burbuja-icono -->
-  <div id="chatbot-bubble">
-    <img src="img/chatbot.png" id="chatbot-icon">
-  </div>
-  <!-- Ventana del chatbot -->
-  <div id="chatbot-window" class="chatbot-window oculto">
-    <div class="chatbot-header">
-      Chat de Ayuda
-      <span id="chatbot-close" style="cursor:pointer; font-weight:bold;">X</span>
-    </div>
-    <div id="chatbot-messages" class="chatbot-messages"></div>
-    <div class="chatbot-input-area">
-      <input id="chatbot-input" type="text" placeholder="Escribe un mensaje...">
-      <button id="chatbot-send">Enviar</button>
-    </div>
-  </div>
+  </main>
+</section>
 
-  <script src="script.js"></script>
-  <script src="chatbot.js"></script>
+
+<!-- ======================
+    SECCIÓN: PICACHOS
+======================= -->
+
+<section id="picachos">
+
+  <section class="hero hero-2">
+    <div class="hero-contenido">
+      <h1>Picachos de Ola</h1>
+      <p>Aventura y naturaleza</p>
+    </div>
+  </section>
+
+  <main class="paquetes-wrapper">
+    <h2>Elige tu paquete</h2>
+
+    <div class="paquete-item">
+      <img src="img/PichachosOlaF.jpg" class="paquete-img">
+      <div class="info-paquete">
+        <h3>Tour Básico</h3>
+        <p>$45 por persona.</p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete1" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete1"
+          data-nombre="Tour Básico"
+          data-precio="45">Agregar</button>
+      </div>
+    </div>
+
+    <div class="paquete-item">
+      <img src="img/Actividad.jpg" class="paquete-img">
+      <div class="info-paquete">
+        <h3>Tour + Cascadas</h3>
+        <p>$60 por persona.</p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete2" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete2"
+          data-nombre="Tour + Cascadas"
+          data-precio="60">Agregar</button>
+      </div>
+    </div>
+
+  </main>
+</section>
+
+
+<!-- ======================
+  SECCIÓN: SANTA CLARA
+======================= -->
+
+<section id="santa-clara">
+
+  <section class="hero hero-3">
+    <div class="hero-contenido">
+      <h1>Playa Santa Clara</h1>
+      <p>Sol, arena y diversión asegurada</p>
+    </div>
+  </section>
+
+  <main class="paquetes-wrapper">
+    <h2>Elige tu paquete</h2>
+
+    <div class="paquete-item">
+      <img src="img/PaqueteSantaclara1.jpg" class="paquete-img2">
+      <div class="info-paquete">
+        <h3>Paquete Básico</h3>
+        <p>Acceso a Playa Santa Clara + uso de ranchos + área social.
+          <b>$15 por persona.</b>
+        </p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete8" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete8"
+          data-nombre="Paquete Básico"
+          data-precio="15">Agregar</button>
+      </div>
+    </div>
+
+    <div class="paquete-item">
+      <img src="img/PaqueteSantaclara3.jpg" class="paquete-img2">
+      <div class="info-paquete">
+        <h3>Full Playa</h3>
+        <p>Transporte + acceso + almuerzo + bebidas.
+          <b>$55 por persona.</b>
+        </p>
+
+        <label>Cantidad:</label>
+        <input type="number" id="cant_paquete10" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete10"
+          data-nombre="Full Playa"
+          data-precio="55">Agregar</button>
+      </div>
+    </div>
+
+    <div class="paquete-item">
+      <img src="img/PaqueteSantaclara4.jpg" class="paquete-img2">
+      <div class="info-paquete">
+        <h3>Cabaña Frente al Mar</h3>
+        <p>Cabaña privada para 2 a 4 personas.
+          <b>$120 por noche.</b>
+        </p>
+
+        <label>Noches:</label>
+        <input type="number" id="cant_paquete11" min="1" value="1">
+
+        <button class="agregar-carrito"
+          data-id="paquete11"
+          data-nombre="Cabaña Frente al Mar"
+          data-precio="120">Agregar</button>
+      </div>
+    </div>
+
+  </main>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="pie-pagina">
+  <div class="container footer-grid">
+    <div class="col">
+      <h4>Acerca de</h4>
+      <p>Turismo de Coclé</p>
+      <p>Promoviendo destinos locales.</p>
+    </div>
+    <div class="col">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+        <li><a href="Juego.html">Juego</a></li>
+        <li><a href="SobreNosotros.html">Sobre nosotros</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Contacto</h4>
+      <p>info.cocletour@gmail.com</p>
+      <p>+507 6490-8994</p>
+    </div>
+    <div class="col">
+      <h4>Síguenos</h4>
+      <p class="redes">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+      </p>
+    </div>
+  </div>
+  <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
+</footer>
+
+<!-- Chatbot -->
+<div id="chatbot-bubble">
+  <img src="img/chatbot.png" id="chatbot-icon">
+</div>
+
+<div id="chatbot-window" class="chatbot-window oculto">
+  <div class="chatbot-header">
+    Chat de Ayuda
+    <span id="chatbot-close" style="cursor:pointer; font-weight:bold;">X</span>
+  </div>
+  <div id="chatbot-messages" class="chatbot-messages"></div>
+  <div class="chatbot-input-area">
+    <input id="chatbot-input" type="text" placeholder="Escribe un mensaje...">
+    <button id="chatbot-send">Enviar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+<script src="carrito.js"></script>
 
 </body>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    // Paquetes del admin (guardados en localStorage)
-    const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
-
-    paquetes.forEach(p => {
-        // Selecciona el contenedor según la categoría
-        const contenedor = document.getElementById(`paquetes-dinamicos-${p.categoria}`);
-        if (!contenedor) return;
-
-        contenedor.innerHTML += `
-        <div class="paquete-item">
-            <img src="${p.imagen}" class="paquete-img" alt="${p.nombre}">
-            <div class="info-paquete">
-                <h3>${p.nombre}</h3>
-                <p>${p.descripcion} <b>$${p.precio}</b></p>
-                <label>Cantidad:</label>
-                <input type="number" min="1" value="1">
-                <button class="agregar-btn" data-nombre="${p.nombre}" data-precio="${p.precio}">
-                    Agregar al carrito
-                </button>
-            </div>
-        </div>
-        `;
-    });
-});
-</script>
 
 </html>

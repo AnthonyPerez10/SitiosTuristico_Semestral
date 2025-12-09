@@ -51,26 +51,46 @@
         </ul>
       </nav>
 
-      <div class="acciones-cabecera">
-        <div class="carrito" id="cartWidget" aria-live="polite">
-          <button id="cartBtn" aria-haspopup="true" aria-expanded="false">
-          <img src="img/carrito.png" alt="Carrito" class="icono-btn">
-          <span id="cartCount">0</span>
-          </button>
-          <div id="cartDropdown" class="desplegable-carrito" aria-hidden="true">
-            <ul id="cartItems"></ul>
-            <div class="carrito-footer">
-              <div class="total">Total: $<span id="cartTotal">0.00</span></div>
-              <button id="checkout" class="btn primario">Finalizar Compra</button>
-            </div>
-          </div>
+<div class="acciones-cabecera">
+
+  <!-- Widget del carrito -->
+  <div class="carrito" id="cartWidget" aria-live="polite">
+
+    <!-- Botón del carrito -->
+    <button id="cartBtn" class="btn-carrito" aria-haspopup="true" aria-expanded="false">
+      <img src="img/carrito.png" alt="Carrito" class="icono-btn">
+      <span id="cartCount">0</span>
+    </button>
+
+    <!-- Dropdown del carrito -->
+    <div id="cartDropdown" class="desplegable-carrito" aria-hidden="true">
+
+      <ul id="cartItems" class="lista-carrito">
+        <!-- Aquí se generan los productos dinámicos -->
+      </ul>
+
+      <div class="carrito-footer">
+        <div class="total">
+          Total: $<span id="cartTotal">0.00</span>
         </div>
-            <div class="cerrar-sesion" id="logoutBtn">
-           <button>
-            <img src="img/salir.png" alt="Cerrar sesión" class="icono-btn">
-         </button>
-        </div>
+
+        <button id="checkout" class="btn primario">
+          Finalizar Compra
+        </button>
       </div>
+
+    </div>
+  </div>
+
+  <!-- Botón cerrar sesión (sin cambios) -->
+  <div class="cerrar-sesion" id="logoutBtn">
+    <button>
+      <img src="img/salir.png" alt="Cerrar sesión" class="icono-btn">
+    </button>
+  </div>
+
+</div>
+
     </div>
   </header>
 
