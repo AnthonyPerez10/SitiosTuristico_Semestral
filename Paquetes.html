@@ -126,7 +126,7 @@
             al carrito</button>
         </div>
       </div>
-
+      <div id="paquetes-dinamicos-parque-omar"></div>
     </main>
   </section>
 
@@ -171,7 +171,7 @@
             data-precio="60">Agregar</button>
         </div>
       </div>
-
+       <div id="paquetes-dinamicos-picachos"></div>
     </main>
   </section>
 
@@ -236,7 +236,7 @@
             data-precio="120">Agregar</button>
         </div>
       </div>
-
+       <div id="paquetes-dinamicos-santa-clara"></div>
     </main>
   </section>
 
@@ -295,7 +295,39 @@
   <script src="script.js"></script>
   <script src="chatbot.js"></script>
   <script src="carrito.js"></script>
+  <script src="admin.js"></script>
 
 </body>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
+
+    paquetes.forEach(p => {
+        const contenedor = document.getElementById(`paquetes-dinamicos-${p.categoria}`);
+        if (!contenedor) return;
+
+        contenedor.innerHTML += `
+        <div class="paquete-item">
+            <img src="${p.imagen}" class="paquete-img" alt="${p.nombre}">
+            <div class="info-paquete">
+                <h3>${p.nombre}</h3>
+                <p>${p.descripcion} <b>$${p.precio}</b></p>
+
+                <label>Cantidad:</label>
+                <input type="number" id="cant_paquete_${p.id}" min="1" value="1">
+
+                <button class="agregar-carrito"
+                    data-id="${p.id}"
+                    data-nombre="${p.nombre}"
+                    data-precio="${p.precio}">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+        `;
+    });
+});
+</script>
 
 </html>
