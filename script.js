@@ -1,10 +1,10 @@
-/*=============== JS Index.html ==================*/
+/*Js index*/
 
-/* UTILIDADES */
+/* utilidades */
 const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 
-/*  BIENVENIDA (modal) */
+/*  Modal */
 const welcomeModal = $("#welcomeModal");
 const closeModal = $("#closeModal");
 const enterSite = $("#enterSite");
@@ -40,7 +40,7 @@ if (welcomeModal) {
   });
 }
 
-/*  NAV RESPONSIVE */
+/*  NAV responsivo */
 const navToggle = $("#navToggle");
 const mainMenu = $("#mainMenu");
 if (navToggle && mainMenu) {
@@ -58,7 +58,7 @@ if (navToggle && mainMenu) {
   });
 }
 
-/*  CARRUSEL / SLIDER */
+/*  Ccarrusel y slider */
 
 (function () {
   const slideEls = Array.from(document.querySelectorAll(".diapo"));
@@ -132,7 +132,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 //cerrarSesion
 document.getElementById("logoutBtn").addEventListener("click", function () {
-  
+
   localStorage.removeItem("usuario");
 
   // Redirección
@@ -143,10 +143,10 @@ document.getElementById("logoutBtn").addEventListener("click", function () {
 let paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
 
 const contenedor = document.getElementById("paquetes-dinamicos");
-contenedor.innerHTML = ""; 
+contenedor.innerHTML = "";
 
 paquetes.forEach(paq => {
-    contenedor.innerHTML += `
+  contenedor.innerHTML += `
     <div class="paquete-item">
        <img src="img/placeholder.jpg" class="paquete-img">
         <div class="info-paquete">

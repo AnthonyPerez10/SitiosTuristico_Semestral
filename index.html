@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Turismo de Coclé — Inicio</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -29,9 +31,9 @@
     <div class="container header-grid">
       <a href="index.html" class="logo">Coclé<span class="accent">Tour</span></a>
 
-        <nav class="navegacion" aria-label="Menú principal">
+      <nav class="navegacion" aria-label="Menú principal">
         <button id="navToggle" class="hamburguesa" aria-expanded="false" aria-controls="mainMenu">
-        <span class="barra"></span><span class="barra"></span><span class="barra"></span>
+          <span class="barra"></span><span class="barra"></span><span class="barra"></span>
         </button>
 
         <ul id="mainMenu" class="menu">
@@ -51,50 +53,31 @@
         </ul>
       </nav>
 
-<div class="acciones-cabecera">
-
-  <!-- Widget del carrito -->
-  <div class="carrito" id="cartWidget" aria-live="polite">
-
-    <!-- Botón del carrito -->
-    <button id="cartBtn" class="btn-carrito" aria-haspopup="true" aria-expanded="false">
-      <img src="img/carrito.png" alt="Carrito" class="icono-btn">
-      <span id="cartCount">0</span>
-    </button>
-
-    <!-- Dropdown del carrito -->
-    <div id="cartDropdown" class="desplegable-carrito" aria-hidden="true">
-
-      <ul id="cartItems" class="lista-carrito">
-        <!-- Aquí se generan los productos dinámicos -->
-      </ul>
-
-      <div class="carrito-footer">
-        <div class="total">
-          Total: $<span id="cartTotal">0.00</span>
+      <div class="acciones-cabecera">
+        <div class="carrito" id="cartWidget" aria-live="polite">
+          <button id="cartBtn" aria-haspopup="true" aria-expanded="false">
+            <img src="img/carrito.png" alt="Carrito" class="icono-btn">
+            <span id="cartCount">0</span>
+          </button>
+          <div id="cartDropdown" class="desplegable-carrito" aria-hidden="true">
+            <ul id="cartItems"></ul>
+            <div class="carrito-footer">
+              <div class="total">Total: $<span id="cartTotal">0.00</span></div>
+              <button id="checkout" class="btn primario">Finalizar Compra</button>
+            </div>
+          </div>
         </div>
 
-        <button id="checkout" class="btn primario">
-          Finalizar Compra
-        </button>
+        <div class="cerrar-sesion" id="logoutBtn">
+          <button>
+            <img src="img/salir.png" alt="Cerrar sesión" class="icono-btn">
+          </button>
+        </div>
       </div>
-
-    </div>
-  </div>
-
-  <!-- Botón cerrar sesión (sin cambios) -->
-  <div class="cerrar-sesion" id="logoutBtn">
-    <button>
-      <img src="img/salir.png" alt="Cerrar sesión" class="icono-btn">
-    </button>
-  </div>
-
-</div>
-
     </div>
   </header>
 
-<!-- Contenido principal -->
+  <!-- Contenido principal -->
   <main>
     <!-- Portada / hero -->
     <section class="portada">
@@ -102,10 +85,10 @@
         <div class="texto-portada">
           <h1 class="titulo">Descubre Coclé</h1>
           <p class="subtitulo">
-                Explora playas increíbles, montañas verdes y cultura única.  
-                Encuentra paquetes, vive experiencias y haz tu viaje inolvidable.
+            Explora playas increíbles, montañas verdes y cultura única.
+            Encuentra paquetes, vive experiencias y haz tu viaje inolvidable.
           </p>
-            <a href="#paquetes" class="btn primario btn-paquetes">Ver Paquetes</a>
+          <a href="#paquetes" class="btn primario btn-paquetes">Ver Paquetes</a>
         </div>
         <div class="carrusel" id="mainSlider" aria-roledescription="carousel">
           <div class="diapositivas">
@@ -114,10 +97,10 @@
             <div class="diapo" style="background-image:url('img/Playa.jpg')"></div>
           </div>
           <button class="nav-diapo anterior" aria-label="Anterior">
-          <img src="img/flecha-izquierda.png" alt="Anterior" class="flecha-icono">
+            <img src="img/flecha-izquierda.png" alt="Anterior" class="flecha-icono">
           </button>
           <button class="nav-diapo siguiente" aria-label="Siguiente">
-          <img src="img/flecha-derecha.png" alt="Siguiente" class="flecha-icono">
+            <img src="img/flecha-derecha.png" alt="Siguiente" class="flecha-icono">
           </button>
           <div class="puntos" id="sliderDots"></div>
         </div>
@@ -151,45 +134,45 @@
       </div>
     </section>
 
-<!-- Paquetes -->
-<section class="paquetes container" id="paquetes">
-  <h2>Paquetes populares</h2>
-  <div class="paquetes-grid">
+    <!-- Paquetes -->
+    <section class="paquetes container" id="paquetes">
+      <h2>Paquetes populares</h2>
+      <div class="paquetes-grid">
 
-    <div class="paquete-card">
-      <img src="img/Actividad1.png" alt="Escapada de Aventura" class="paquete-img">
-      <h3>Escapada de Aventura</h3>
-      <p>2 días · Transporte incluido</p>
-      <div class="price">$120.00</div>
-      <a href="Paquetes.html" class="btn">Ver</a>
-    </div>
+        <div class="paquete-card">
+          <img src="img/Actividad1.png" alt="Escapada de Aventura" class="paquete-img">
+          <h3>Senderismo interno</h3>
+          <p>1 día · Transporte incluido y guia local</p>
+          <div class="price">$30.00</div>
+          <a href="Paquetes.html#parque-omar" class="btn">Ver</a>
+        </div>
 
-    <div class="paquete-card">
-      <img src="img/Actividad1S.jpg" alt="Relax en la Playa" class="paquete-img">
-      <h3>Relax en la Playa</h3>
-      <p>3 días · Hotel 3 estrellas</p>
-      <div class="price">$200.00</div>
-      <a href="Paquetes.html" class="btn">Ver</a>
-    </div>
+        <div class="paquete-card">
+          <img src="img/PichachosOlaF.jpg" alt="Relax en la Playa" class="paquete-img">
+          <h3>Tour basico</h3>
+          <p>1 días · Guia local</p>
+          <div class="price">$55.00</div>
+          <a href="Paquetes.html#picachos" class="btn">Ver</a>
+        </div>
 
-    <div class="paquete-card">
-      <img src="img/Actividad3S.jpg" alt="Tour Cultural" class="paquete-img">
-      <h3>Tour Cultural</h3>
-      <p>1 día · Guía local</p>
-      <div class="price">$60.00</div>
-      <a href="Paquetes.html" class="btn">Ver</a>
-    </div>
-  </div>
+        <div class="paquete-card">
+          <img src="img/Actividad3S.jpg" alt="Tour Cultural" class="paquete-img">
+          <h3>Full playa</h3>
+          <p>1 día · Transporte y comida</p>
+          <div class="price">$55.00</div>
+          <a href="Paquetes.html#santa-clara" class="btn">Ver</a>
+        </div>
+      </div>
 
-</section>
+    </section>
     <!-- Llamado a la acción -->
     <section class="llamado container">
       <div class="contenedor-llamado">
-      <div class="tarjeta-llamado">
-        <h2>Juego: Encuentra el Tesoro</h2>
-        <p>Juega y gana descuentos en paquetes.</p>
-        <a href="Juego.html" class="btn primario">Jugar ahora</a>
-      </div>
+        <div class="tarjeta-llamado">
+          <h2>Juego: Encuentra el Tesoro</h2>
+          <p>Juega y gana descuentos en paquetes.</p>
+          <a href="Juego.html" class="btn primario">Jugar ahora</a>
+        </div>
       </div>
     </section>
   </main>
@@ -199,7 +182,8 @@
     <div class="container footer-grid">
       <div class="col">
         <h4>Acerca de</h4>
-        <p>Turismo de Coclé </p> <p>Promoviendo destinos locales.</p>
+        <p>Turismo de Coclé </p>
+        <p>Promoviendo destinos locales.</p>
       </div>
       <div class="col">
         <h4>Enlaces</h4>
@@ -216,54 +200,55 @@
         <p>+507 6490-8994</p>
       </div>
       <div class="col">
-  <h4>Síguenos</h4>
-  <p class="redes">
-    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-      <i class="fa-brands fa-facebook"></i>
-    </a>
+        <h4>Síguenos</h4>
+        <p class="redes">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
 
-    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
 
-    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
-      <i class="fa-brands fa-youtube"></i>
-    </a>
-  </p>
-</div>
+          <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </p>
+      </div>
     </div>
     <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
   </footer>
 
   <!-- Chatbot flotante -->
-<!-- Burbuja-icono -->
-<div id="chatbot-bubble">
+  <!-- Burbuja-icono -->
+  <div id="chatbot-bubble">
     <img src="img/chatbot.png" id="chatbot-icon">
-</div>
-<!-- Ventana del chatbot -->
-<div id="chatbot-window" class="chatbot-window oculto">
-  <div class="chatbot-header">
-    Chat de Ayuda
-    <span id="chatbot-close" style="cursor:pointer; font-weight:bold;">X</span>
   </div>
-  <div id="chatbot-messages" class="chatbot-messages"></div>
-  <div class="chatbot-input-area">
-    <input id="chatbot-input" type="text" placeholder="Escribe un mensaje...">
-    <button id="chatbot-send">Enviar</button>
+  <!-- Ventana del chatbot -->
+  <div id="chatbot-window" class="chatbot-window oculto">
+    <div class="chatbot-header">
+      Chat de Ayuda
+      <span id="chatbot-close" style="cursor:pointer; font-weight:bold;">X</span>
+    </div>
+    <div id="chatbot-messages" class="chatbot-messages"></div>
+    <div class="chatbot-input-area">
+      <input id="chatbot-input" type="text" placeholder="Escribe un mensaje...">
+      <button id="chatbot-send">Enviar</button>
+    </div>
   </div>
-</div>
 
   <script src="script.js"></script>
   <script src="chatbot.js"></script>
+  <script src="carrito.js"></script>
 
-<script>
-  const sesion = JSON.parse(sessionStorage.getItem("sesion"));
+  <script>
+    const sesion = JSON.parse(sessionStorage.getItem("sesion"));
 
-  // Si NO está logueado, lo mandamos al login
-  if (!sesion) {
+    // Si NO está logueado, lo mandamos al login
+    if (!sesion) {
       window.location.href = "login.html";
-  }
-</script>
+    }
+  </script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-/* === TUS ESTILOS de Login */
+/* Estilos del login */
 
 body {
   margin: 0;
@@ -59,7 +59,7 @@ button:hover { background: #0e8a73; }
   display: none;
 }
 
-/* === SOLO LO NUEVO PARA ANIMAR LOGIN/REGISTRO === */
+/* Animacion del login registro */
 .oculto {
   opacity: 0;
   transform: scale(.9);
@@ -78,7 +78,7 @@ button:hover { background: #0e8a73; }
   font-weight: bold;
 }
 
-/* ====== TOAST (NOTIFICACIÓN ARRIBA) ====== */
+/* Notificacion de arriba*/
 #toast {
   position: fixed;
   top: 20px;

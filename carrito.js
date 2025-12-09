@@ -8,7 +8,7 @@ function escapeHtml(t) {
   }[c]));
 }
 
-/*  CARRITO */
+/*  Carrito */
 const cart = {
   items: JSON.parse(localStorage.getItem("cartItems") || "[]"),
 
@@ -36,7 +36,7 @@ const cart = {
   }
 };
 
-/*  ELEMENTOS DOM  */
+/*  Elementos DOM  */
 const cartBtn = document.getElementById("cartBtn");
 const cartDropdown = document.getElementById("cartDropdown");
 const cartItemsEl = document.getElementById("cartItems");
@@ -44,7 +44,7 @@ const cartTotalEl = document.getElementById("cartTotal");
 const cartCountEl = document.getElementById("cartCount");
 const checkoutBtn = document.getElementById("checkout");
 
-/* RENDER */
+/* Render */
 function renderCart() {
   cartItemsEl.innerHTML = "";
 
@@ -71,7 +71,7 @@ function renderCart() {
 
 renderCart();
 
-/* AGREGAR AL CARRITO  */
+/* Agregar al carrito  */
 document.addEventListener("click", e => {
   const btn = e.target.closest(".agregar-carrito");
   if (!btn) return;
@@ -94,7 +94,7 @@ document.addEventListener("click", e => {
   setTimeout(() => (btn.textContent = "Agregar"), 800);
 });
 
-/* FINALIZAR COMPRA  */
+/* Finalizar la compra  */
 checkoutBtn.addEventListener("click", () => {
   if (cart.items.length === 0) {
     mostrarModal("!Carrito vacío¡", "Agrega un paquete antes de continuar.");
@@ -110,7 +110,7 @@ checkoutBtn.addEventListener("click", () => {
   closeCart();
 });
 
-/*  MODAL */
+/*  Modal */
 function mostrarModal(titulo, mensaje) {
   const modal = document.createElement("div");
   modal.className = "modal-compra";
@@ -127,7 +127,7 @@ function mostrarModal(titulo, mensaje) {
   document.getElementById("cerrarModal").onclick = () => modal.remove();
 }
 
-/*  DROPDOWN */
+/*  Dropdown */
 cartDropdown.style.opacity = "0";
 cartDropdown.style.pointerEvents = "none";
 cartDropdown.style.transform = "translateY(10px)";

@@ -6,19 +6,20 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Juego de turismo</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-  <!--     Estudiantes: Brandom Arcia, Anthony Perez -->
- <!-- Menu de navegacion-->
+  <!-- Menu de navegacion-->
   <header class="cabecera">
     <div class="container header-grid">
       <a href="index.html" class="logo">Coclé<span class="accent">Tour</span></a>
 
-        <nav class="navegacion" aria-label="Menú principal">
+      <nav class="navegacion" aria-label="Menú principal">
         <button id="navToggle" class="hamburguesa" aria-expanded="false" aria-controls="mainMenu">
-        <span class="barra"></span><span class="barra"></span><span class="barra"></span>
+          <span class="barra"></span><span class="barra"></span><span class="barra"></span>
         </button>
 
         <ul id="mainMenu" class="menu">
@@ -31,6 +32,7 @@
               <li><a href="SantaClara.html">Playa Santa Clara</a></li>
             </ul>
           </li>
+          <li><a href="Paquetes.html">Paquetes</a></li>
           <li><a href="Juego.html">Juego</a></li>
           <li><a href="Contacto.html">Contacto</a></li>
           <li><a href="SobreNosotros.html">Sobre nosotros</a></li>
@@ -38,14 +40,10 @@
       </nav>
 
       <div class="acciones-cabecera">
-        <button id="openChat" class="btn-chat" title="Abrir chat">
-       <img src="img/chatbot.png" alt="Chat" class="icono-btn">
-      </button>
-
         <div class="carrito" id="cartWidget" aria-live="polite">
           <button id="cartBtn" aria-haspopup="true" aria-expanded="false">
-          <img src="img/carrito.png" alt="Carrito" class="icono-btn">
-          <span id="cartCount">0</span>
+            <img src="img/carrito.png" alt="Carrito" class="icono-btn">
+            <span id="cartCount">0</span>
           </button>
           <div id="cartDropdown" class="desplegable-carrito" aria-hidden="true">
             <ul id="cartItems"></ul>
@@ -54,6 +52,12 @@
               <button id="checkout" class="btn primario">Finalizar Compra</button>
             </div>
           </div>
+        </div>
+
+        <div class="cerrar-sesion" id="logoutBtn">
+          <button>
+            <img src="img/salir.png" alt="Cerrar sesión" class="icono-btn">
+          </button>
         </div>
       </div>
     </div>
@@ -66,12 +70,13 @@
 
   <main id="map"></main>
 
-   <!-- Footer -->
+  <!-- Footer -->
   <footer class="pie-pagina">
     <div class="container footer-grid">
       <div class="col">
         <h4>Acerca de</h4>
-        <p>Turismo de Coclé </p> <p>Promoviendo destinos locales.</p>
+        <p>Turismo de Coclé </p>
+        <p>Promoviendo destinos locales.</p>
       </div>
       <div class="col">
         <h4>Enlaces</h4>
@@ -88,26 +93,47 @@
         <p>+507 6490-8994</p>
       </div>
       <div class="col">
-  <h4>Síguenos</h4>
-  <p class="redes">
-    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-      <i class="fa-brands fa-facebook"></i>
-    </a>
+        <h4>Síguenos</h4>
+        <p class="redes">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
 
-    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
 
-    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
-      <i class="fa-brands fa-youtube"></i>
-    </a>
-  </p>
-</div>
+          <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </p>
+      </div>
     </div>
     <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
   </footer>
 
+  <!-- Chatbot flotante -->
+  <!-- Burbuja-icono -->
+  <div id="chatbot-bubble">
+    <img src="img/chatbot.png" id="chatbot-icon">
+  </div>
+  <!-- Ventana del chatbot -->
+  <div id="chatbot-window" class="chatbot-window oculto">
+    <div class="chatbot-header">
+      Chat de Ayuda
+      <span id="chatbot-close" style="cursor:pointer; font-weight:bold;">X</span>
+    </div>
+    <div id="chatbot-messages" class="chatbot-messages"></div>
+    <div class="chatbot-input-area">
+      <input id="chatbot-input" type="text" placeholder="Escribe un mensaje...">
+      <button id="chatbot-send">Enviar</button>
+    </div>
+  </div>
+
   <script src="juego.js"></script>
+  <script src="chatbot.js"></script>
+  <script src="carrito.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

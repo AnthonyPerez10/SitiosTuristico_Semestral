@@ -1,7 +1,7 @@
 // --- HASH SHA-256 ---
 async function hash(texto) {
   const buffer = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(texto));
-  return [...new Uint8Array(buffer)].map(b => b.toString(16).padStart(2,"0")).join("");
+  return [...new Uint8Array(buffer)].map(b => b.toString(16).padStart(2, "0")).join("");
 }
 
 // --- Obtener usuarios ---
@@ -14,11 +14,11 @@ function guardarUsuarios(lista) {
   localStorage.setItem("ct_usuarios_v1", JSON.stringify(lista));
 }
 
-// --- Crear ADMIN si no existe ---
+// --- Crear usuario admin si no existe ---
 async function inicializarDemo() {
   let usuarios = obtenerUsuarios();
 
-  // Si no hay ningún usuario → crear admin
+  // Si no hay ningún usuario se crea admin
   if (usuarios.length === 0) {
     const passHash = await hash("Admin@123");
     usuarios = [{
@@ -30,7 +30,7 @@ async function inicializarDemo() {
     return;
   }
 
-  // Normalizar usuarios viejos si existieran
+  // Normalizar usuarios
   usuarios = usuarios.map(u => ({
     usuario: u.usuario,
     passwordHash: u.passwordHash,
@@ -86,7 +86,7 @@ document.getElementById("btnRegistro").addEventListener("click", async () => {
 
   if (usuarios.find(u => u.usuario === usuario)) {
     toast("Ese usuario ya existe");
-return;
+    return;
 
   }
 
@@ -101,7 +101,7 @@ return;
   guardarUsuarios(usuarios);
 
   toast("Cuenta creada correctamente");
-mostrarLogin();
+  mostrarLogin();
 
 });
 

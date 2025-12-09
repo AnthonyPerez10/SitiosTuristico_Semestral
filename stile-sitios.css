@@ -1,15 +1,14 @@
-
-
 .contenedor-principal {
     max-width: 1200px;
-    margin: 130px auto 70px; /* Baja debajo del nav */
+    margin: 130px auto 70px;
+    /* Baja debajo del nav */
     display: flex;
     flex-direction: column;
     gap: 70px;
     padding: 0 20px;
 }
 
-/* ===================== TARJETA ===================== */
+/* Para las tarjetas */
 .bloque-info {
     background: #ffffff;
     border-radius: 18px;
@@ -17,36 +16,36 @@
     display: flex;
     gap: 35px;
     align-items: center;
-    box-shadow: 0px 6px 18px rgba(0,0,0,0.12);
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.12);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .bloque-info:hover {
     transform: translateY(-3px);
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .bloque-info.reverse {
     flex-direction: row-reverse;
 }
 
-/* ===================== TEXTO ===================== */
+/* texto  */
 .informacion-p {
     flex: 1;
 }
 
-.informacion-p2{
+.informacion-p2 {
     flex: 1;
     padding: 25px 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 360px; /* ajustado */
-    gap: 4px; /* menos espacio entre cada línea */
+    min-height: 360px;
+    gap: 4px;
 }
 
 /* Control de márgenes internos */
-.informacion-p2 h2{
+.informacion-p2 h2 {
     margin-bottom: 6px;
 }
 
@@ -64,9 +63,6 @@
     margin: 10px 0 10px 20px;
 }
 
-
-
-
 .informacion-p h2 {
     font-size: 28px;
     margin-bottom: 12px;
@@ -82,18 +78,19 @@
     margin: 10px 0 10px 20px;
 }
 
-/* ===================== IMÁGENES ===================== */
+/*Imagenes*/
 .side-img,
 .side-img2 {
     width: 420px;
     height: 280px;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    flex-shrink: 0; /* Evita que se deformen */
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+    /* Evita que se deformen */
 }
 
-/* ===================== GALERÍA ===================== */
+/* Galeria*/
 .galeria {
     flex: 1;
     display: grid;
@@ -106,7 +103,7 @@
     height: 160px;
     object-fit: cover;
     border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     transition: transform 0.25s ease;
 }
 
@@ -114,7 +111,7 @@
     transform: scale(1.03);
 }
 
-/* ===================== BOTÓN PAQUETES ===================== */
+/* Boton de ver paquetes */
 .boton-paquetes-container {
     text-align: center;
     margin-top: 30px;
@@ -129,7 +126,7 @@
     font-weight: bold;
     color: #fff;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
     transition: 0.25s;
 }
 
@@ -138,9 +135,10 @@
     transform: translateY(-3px);
 }
 
-/* ===================== RESPONSIVE ===================== */
+/* resposivo */
 
 @media (max-width: 950px) {
+
     .bloque-info,
     .bloque-info.reverse {
         flex-direction: column;
@@ -170,25 +168,25 @@
 
 
 .hero-1 {
-  background-image: url("img/ParqueOmar.jpeg");
+    background-image: url("img/ParqueOmar.jpeg");
 }
 
 .hero-2 {
-  background-image: url("img/PichachosOla.jpg");
+    background-image: url("img/PichachosOla.jpg");
 }
 
 .hero-3 {
-  background-image: url("img/SantaClaraLogo.jpg");
+    background-image: url("img/SantaClaraLogo.jpg");
 }
 
-/* ===================== GALERÍA VERTICAL — SOLO SITIO3 ===================== */
+/* imagenes verticales en santa clara */
 
 .galeria-vertical {
     display: flex;
     flex-direction: column;
     gap: 25px;
     flex: 1;
-    max-width: 420px; /* igual que las side-img */
+    max-width: 420px;
 }
 
 .galeria-vertical img {
@@ -196,7 +194,7 @@
     height: 200px;
     object-fit: cover;
     border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     transition: transform 0.25s ease;
 }
 
@@ -204,7 +202,7 @@
     transform: scale(1.03);
 }
 
-/* RESPONSIVE */
+/* responsivo */
 @media (max-width: 950px) {
     .galeria-vertical {
         max-width: 100%;

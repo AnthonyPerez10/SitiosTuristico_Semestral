@@ -1,4 +1,4 @@
-// --- Verificar acceso ---
+// Verificar acceso 
 const sesion = JSON.parse(sessionStorage.getItem("sesion"));
 
 if (!sesion) {

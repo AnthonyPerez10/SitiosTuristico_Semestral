@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let time = 30;
     let isGameOver = false;
 
-    let gameInterval;          
-    let destinationInterval;   
-    const spawnRate = 1000;     
+    let gameInterval;
+    let destinationInterval;
+    const spawnRate = 1000;
 
 
     /* Actualiza la puntuación del jugador */

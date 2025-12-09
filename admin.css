@@ -12,7 +12,7 @@ body {
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -99,7 +99,7 @@ h2 {
   background: #f8f9f9;
   padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   margin-bottom: 15px;
 }
 
@@ -128,16 +128,16 @@ h2 {
 }
 
 /*Estilos de botones generados */
-/* ------- Estilos para tarjetas de paquetes ------- */
+/* Estilos para tarjetas de paquetes*/
 .paquete-item {
   background: #ffffff;
   padding: 15px;
   border-radius: 12px;
   margin-bottom: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* ------- Botón Editar ------- */
+/*  Botón Editar  */
 .btn-editar {
   background: #0b6b5a;
   color: white;
@@ -153,7 +153,7 @@ h2 {
   background: #0e8a73;
 }
 
-/* ------- Botón Eliminar ------- */
+/* Botón Eliminar */
 .btn-eliminar {
   background: #d9534f;
   color: white;
@@ -170,77 +170,80 @@ h2 {
 
 /* Estilos de botones de control de admin usuarios*/
 .usuario-item {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 12px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.btn-editar, .btn-eliminar {
-    padding: 8px 14px;
-    margin-right: 6px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
+.btn-editar,
+.btn-eliminar {
+  padding: 8px 14px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .btn-editar {
-    background: #0b6b5a;
-    color: white;
+  background: #0b6b5a;
+  color: white;
 }
 
 .btn-eliminar {
-    background: #c0392b;
-    color: white;
+  background: #c0392b;
+  color: white;
 }
 
 /*Estilos del css de los select*/
 /* Estilo para el select de categorías */
 #categoriaPaquete {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 16px;
-    border: 2px solid #cdd7d4;
-    border-radius: 8px;
-    background-color: #fff;
-    color: #0b6b5a;
-    cursor: pointer;
-    appearance: none; /* Oculta la flecha por defecto */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #cdd7d4;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #0b6b5a;
+  cursor: pointer;
+  appearance: none;
+  /* Oculta la flecha por defecto */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 /* Al hacer foco */
 #categoriaPaquete:focus {
-    border-color: #0b6b5a;
-    box-shadow: 0 0 5px rgba(11, 107, 90, 0.5);
-    outline: none;
+  border-color: #0b6b5a;
+  box-shadow: 0 0 5px rgba(11, 107, 90, 0.5);
+  outline: none;
 }
 
 /* Contenedor para flecha personalizada */
 .select-wrapper {
-    position: relative;
-    display: inline-block;
-    width: 100%;
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
 /* Flecha personalizada */
 .select-wrapper::after {
-    content: "▼";
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%);
-    pointer-events: none;
-    color: #0b6b5a;
-    font-size: 12px;
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #0b6b5a;
+  font-size: 12px;
 }
 
 /* Ajuste del select dentro del wrapper */
 .select-wrapper select {
-    width: 100%;
-    padding-right: 35px; /* Espacio para la flecha */
+  width: 100%;
+  padding-right: 35px;
+  /* Espacio para la flecha */
 }

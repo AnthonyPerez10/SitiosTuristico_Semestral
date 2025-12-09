@@ -1,7 +1,8 @@
 /* Contenedor de tarjetas */
 .paquetes-wrapper {
-    width: 92%; 
-    max-width: 1300px; /* Amplía aún más las tarjetas */
+    width: 92%;
+    max-width: 1300px;
+    /* Amplía las tarjetas */
     margin: 0 auto 70px auto;
 }
 
@@ -11,7 +12,7 @@
     margin-bottom: 30px;
 }
 
-/* Tarjetas – Más amplias */
+/* Tarjetas */
 .paquete-item {
     display: flex;
     gap: 30px;
@@ -19,26 +20,27 @@
     border-radius: 18px;
     padding: 30px;
     margin-bottom: 40px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
     transition: transform .2s, box-shadow .2s;
 }
 
 .paquete-item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 /* Imagen lateral */
 .paquete-img,
 .paquete-img2 {
-    width: 360px;    /* Más grande */
+    width: 360px;
     height: 240px;
     object-fit: cover;
     border-radius: 16px;
-    flex-shrink: 0; /* Para que nunca se deforme */
+    flex-shrink: 0;
+    /* Para que no se deforme */
 }
 
-/* Info */
+/* Informacion */
 .info-paquete {
     flex: 1;
     display: flex;
@@ -88,8 +90,6 @@
     transform: scale(1.03);
 }
 
-
-
 /* RESPONSIVE */
 @media (max-width: 950px) {
     .paquete-item {
@@ -113,37 +113,45 @@
 }
 
 .hero {
-  background: center/cover no-repeat fixed;
-  height: 60vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px;  /* espacio debajo del banner */
+    background: center/cover no-repeat fixed;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
 }
 
 .hero-contenido {
-  position: relative;
-  text-align: center;
-  color:#ffffff;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
 }
 
 .hero h1 {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 .hero p {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
-/* IMÁGENES INDIVIDUALES */
-section.hero.hero-1 { background-image: url("img/ParqueOmar.jpeg") !important; }
-section.hero.hero-2 { background-image: url("img/PichachosOla.jpg") !important; }
-section.hero.hero-3 { background-image: url("img/SantaClaraLogo.jpg") !important; }
+/* Imagenes individuales para cada hero de cada seccion */
+section.hero.hero-1 {
+    background-image: url("img/ParqueOmar.jpeg") !important;
+}
+
+section.hero.hero-2 {
+    background-image: url("img/PichachosOla.jpg") !important;
+}
+
+section.hero.hero-3 {
+    background-image: url("img/SantaClaraLogo.jpg") !important;
+}
