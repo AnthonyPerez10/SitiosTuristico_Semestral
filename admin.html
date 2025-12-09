@@ -1,11 +1,13 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panel de Administración</title>
   <link rel="stylesheet" href="admin.css">
 </head>
+
 <body>
 
   <div class="admin-container">
@@ -20,15 +22,33 @@
 
     <div id="seccion-usuarios" class="seccion oculto">
       <h2>Gestión de Usuarios</h2>
-      <p>Aquí agregaremos el CRUD de usuarios.</p>
+      <div id="ListaUsuarios"></div>
     </div>
 
     <div id="seccion-paquetes" class="seccion oculto">
       <h2>Gestión de Paquetes Turísticos</h2>
-      <p>Aquí va el CRUD de paquetes turísticos.</p>
+      <form id="formPaquete">
+        <input type="text" id="nombrePaquete" placeholder="Nombre del paquete" required>
+        <input type="number" id="precioPaquete" placeholder="Precio" required>
+        <input type="file" id="imagenPaquete" accept="image/*">
+        <div class="select-wrapper">
+          <select id="categoriaPaquete" required>
+            <option value="parque-omar">Parque Omar</option>
+            <option value="picachos">Picachos</option>
+            <option value="santa-clara">Santa Clara</option>
+          </select>
+        </div>
+
+        <textarea id="descripcionPaquete" placeholder="Descripción" required></textarea>
+        <button type="submit">Agregar paquete</button>
+      </form>
+      <div id="ListaPaquetes"></div>
     </div>
+
+
   </div>
 
-  <script src="auth.js"></script>
+  <script src="admin.js"></script>
 </body>
-</html> -->
+
+</html>

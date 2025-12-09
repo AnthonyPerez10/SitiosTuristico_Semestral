@@ -138,3 +138,26 @@ document.getElementById("logoutBtn").addEventListener("click", function () {
   // Redirección
   window.location.href = "login.html";
 });
+
+/* Adminisatrado de Paquetes  */
+let paquetes = JSON.parse(localStorage.getItem("paquetes")) || [];
+
+const contenedor = document.getElementById("paquetes-dinamicos");
+contenedor.innerHTML = ""; 
+
+paquetes.forEach(paq => {
+    contenedor.innerHTML += `
+    <div class="paquete-item">
+       <img src="img/placeholder.jpg" class="paquete-img">
+        <div class="info-paquete">
+            <h3>${paq.nombre}</h3>
+            <p>${paq.descripcion} <b>$${paq.precio}</b></p>
+            <label>Cantidad:</label>
+            <input type="number" min="1" value="1">
+            <button class="agregar-btn" data-nombre="${paq.nombre}" data-precio="${paq.precio}">Agregar</button>
+        </div>
+    </div>
+    `;
+});
+
+
