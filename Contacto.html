@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Contacto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Contacto</title>
 </head>
+
 <body>
   <!-- Menu de navegacion-->
   <header class="cabecera">
     <div class="container header-grid">
       <a href="index.html" class="logo">Coclé<span class="accent">Tour</span></a>
 
-        <nav class="navegacion" aria-label="Menú principal">
+      <nav class="navegacion" aria-label="Menú principal">
         <button id="navToggle" class="hamburguesa" aria-expanded="false" aria-controls="mainMenu">
-        <span class="barra"></span><span class="barra"></span><span class="barra"></span>
+          <span class="barra"></span><span class="barra"></span><span class="barra"></span>
         </button>
 
         <ul id="mainMenu" class="menu">
@@ -36,13 +40,13 @@
 
       <div class="acciones-cabecera">
         <button id="openChat" class="btn-chat" title="Abrir chat">
-       <img src="img/chatbot.png" alt="Chat" class="icono-btn">
-      </button>
+          <img src="img/chatbot.png" alt="Chat" class="icono-btn">
+        </button>
 
         <div class="carrito" id="cartWidget" aria-live="polite">
           <button id="cartBtn" aria-haspopup="true" aria-expanded="false">
-          <img src="img/carrito.png" alt="Carrito" class="icono-btn">
-          <span id="cartCount">0</span>
+            <img src="img/carrito.png" alt="Carrito" class="icono-btn">
+            <span id="cartCount">0</span>
           </button>
 
           <div id="cartDropdown" class="desplegable-carrito" aria-hidden="true">
@@ -58,7 +62,7 @@
   </header>
 
 
-    <main class="wrap" role="main">
+  <main class="wrap" role="main">
     <section class="grid" aria-labelledby="contact-title">
 
       <!-- LEFT -->
@@ -67,8 +71,8 @@
 
         <p>
           ¡Estamos aqui para ayudarte!. Completa el formulario contactanos
-          correo electronico o telefono. Nuestro equipo de atencion al cliente 
-          esta disponible para ayudarte a obtener la mejor experiencia, ya sea que tengas 
+          correo electronico o telefono. Nuestro equipo de atencion al cliente
+          esta disponible para ayudarte a obtener la mejor experiencia, ya sea que tengas
           un problema con tu compra o tengas alguna dudas sobre los tour.
         </p>
 
@@ -138,7 +142,8 @@
     <div class="container footer-grid">
       <div class="col">
         <h4>Acerca de</h4>
-        <p>Turismo de Coclé </p> <p>Promoviendo destinos locales.</p>
+        <p>Turismo de Coclé </p>
+        <p>Promoviendo destinos locales.</p>
       </div>
       <div class="col">
         <h4>Enlaces</h4>
@@ -155,34 +160,54 @@
         <p>+507 6490-8994</p>
       </div>
       <div class="col">
-  <h4>Síguenos</h4>
-  <p class="redes">
-    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-      <i class="fa-brands fa-facebook"></i>
-    </a>
+        <h4>Síguenos</h4>
+        <p class="redes">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
 
-    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
 
-    <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
-      <i class="fa-brands fa-youtube"></i>
-    </a>
-  </p>
-</div>
+          <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </p>
+      </div>
     </div>
     <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
   </footer>
-    <script src="Contacto.js"></script>
+
+  <!-- Chatbot flotante -->
+  <!-- Burbuja-icono -->
+  <div id="chatbot-bubble">
+    <img src="img/chatbot.png" id="chatbot-icon">
+  </div>
+  <!-- Ventana del chatbot -->
+  <div id="chatbot-window" class="chatbot-window oculto">
+    <div class="chatbot-header">
+      Chat de Ayuda
+      <span id="chatbot-close" style="cursor:pointer; font-weight:bold;">X</span>
+    </div>
+    <div id="chatbot-messages" class="chatbot-messages"></div>
+    <div class="chatbot-input-area">
+      <input id="chatbot-input" type="text" placeholder="Escribe un mensaje...">
+      <button id="chatbot-send">Enviar</button>
+    </div>
+  </div>
+
+  <script src="Contacto.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 
 <!-- Modal de notificacion para las validaciones-->
 <div id="modalNotificacion" class="modal oculto">
   <div class="modal-contenido">
-      <span id="modalIcono" class="icono">✔</span>
-      <h3 id="modalTitulo">Título aquí</h3>
-      <p id="modalMensaje">Mensaje aquí</p>
-      <button id="modalCerrar" class="btn-cerrar">Cerrar</button>
+    <span id="modalIcono" class="icono">✔</span>
+    <h3 id="modalTitulo">Título aquí</h3>
+    <p id="modalMensaje">Mensaje aquí</p>
+    <button id="modalCerrar" class="btn-cerrar">Cerrar</button>
   </div>
 </div>
 
