@@ -5,22 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parque Omar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stile-sitios.css" />
 </head>
 
 <body>
-  <!--  Pagina principal -->
-
-  <!-- Bienvenida -->
-  <div id="welcomeModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="welcomeTitle">
-    <div class="modal-contenido">
-      <button class="modal-cerrar" id="closeModal" aria-label="Cerrar">✕</button>
-      <h2 id="welcomeTitle">Bienvenido a Turismo de Coclé</h2>
-      <p>Explora los mejores destinos, reserva paquetes y juega para ganar descuentos.</p>
-      <button id="enterSite" class="btn primario">Entrar al sitio</button>
-    </div>
-  </div>
-
   <!-- Menu de navegacion-->
   <header class="cabecera">
     <div class="container header-grid">
@@ -41,6 +31,7 @@
               <li><a href="SantaClara.html">Playa Santa Clara</a></li>
             </ul>
           </li>
+          <li><a href="Paquetes.html">Paquetes</a></li>
           <li><a href="Juego.html">Juego</a></li>
           <li><a href="Contacto.html">Contacto</a></li>
           <li><a href="SobreNosotros.html">Sobre nosotros</a></li>
@@ -48,10 +39,6 @@
       </nav>
 
       <div class="acciones-cabecera">
-        <button id="openChat" class="btn-chat" title="Abrir chat">
-       <img src="img/chatbot.png" alt="Chat" class="icono-btn">
-      </button>
-
         <div class="carrito" id="cartWidget" aria-live="polite">
           <button id="cartBtn" aria-haspopup="true" aria-expanded="false">
           <img src="img/carrito.png" alt="Carrito" class="icono-btn">
@@ -65,130 +52,117 @@
             </div>
           </div>
         </div>
+            <div class="cerrar-sesion" id="logoutBtn">
+           <button>
+            <img src="img/salir.png" alt="Cerrar sesión" class="icono-btn">
+         </button>
+        </div>
       </div>
     </div>
   </header>
+<section class="hero hero-1">
+  <div class="hero-contenido">
+    <h1>Parque Omar Torrijos Herrera </h1>
+  </div>
+</section>
 
-    <!-- Codigo de Parque Omar-->
-    <div class="imagen-con-titulo">
-        <img src="img/ParqueOmar.jpeg" alt="Parque omar">
-        <h1>Parque Omar Torrijos</h1>
-    </div>
+<div class="contenedor-principal">
 
-    <!--Informacion -->
-    <div class="contenedor-pricipal">
-        <!--Informacion 1-->
-        <div class="contenedor-1">
-            <div class="informacion-p left">
-                <h2>Parque Omar Torrijos - El Copé</h2>
-                <p>
-                    Ubicado en pleno corazón de la naturaleza coclesana, el Parque Nacional Omar Torrijos Herrera ofrece
-                    aire puro y una serenidad incomparable,
-                    rodeado de exuberante vegetación y un ambiente ideal para disfrutar de la vida al aire libre.
-                <ul>
-                    <li>Amplío de flora y fauna.</li>
-                    <li>Increible paisaje para fotografiar</li>
-                    <li>Hermosas rutas y senderismo aptas para todas las personas</li>
-                </ul>
-                </p>
-            </div>
-            <img src="img/ParqueOmarS.jpg" alt="Imagen de Parque Omar torrijos - senderismo" class="side-img">
+    <!-- BLOQUE 1 -->
+    <div class="bloque-info">
+        <div class="informacion-p">
+            <h2>Parque Omar Torrijos - El Copé</h2>
+            <p>
+                Ubicado en pleno corazón de la naturaleza coclesana, el Parque Nacional Omar Torrijos Herrera ofrece
+                aire puro, rutas verdes y un ambiente perfecto para disfrutar de la vida al aire libre.
+            </p>
+
+            <ul>
+                <li>Amplia flora y fauna</li>
+                <li>Paisajes perfectos para fotografía</li>
+                <li>Senderos aptos para todas las personas</li>
+            </ul>
         </div>
 
-        <!--Informacion 2-->
-        <div class="contenedor-2">
-            <div class="informacion-p left">
-                <h2>Información y ubicación de Parque Omar Torrijos</h2>
-                <p>
-                    <b>📌 Ubicación</b><br>
-                <ul>
-                    <li>El parque esta en la provincia de Coclé, en la zona de la cordillera Central de Panamá, al norte
-                        del poblado El Copé.</li>
-                    <li>Se extiende también en distritos como la Pintada y Olá.</li>
-                    <li>Dentro de sus limites tambien estan, los picos Cerro Peña Blanca y Cerro Marta.</li>
-                </ul>
-                <b>¿Que es el parque? - Su naturaleza y biodiversidad</b><br>
-                En cuanto a su biodiversidad en la zona se han registrado unas 2,604 especies de plantas y 552 especies
-                de vertebrados terrestre,
-                muchas de ellas se pueden observar dentro del parque.
-                Entre la fauna que se puede observar son aves (mas de 300 - 500 especies), monos, mamíferos, como pumas,
-                jaguares, tapires, ademas de reptiles y anfibios.
-                <br><b>🏕 Como llegar</b>
-                <ul>
-                    <li>Para llegar desde la Ciudad de Panamá hay que tomar la carretera Interamericana hasta la
-                        comunidad de la Calendaria en Coclé, luego de hay entrar
-                        hacia El Cope. Desde el Copé hau una carretera que conduce al parque, se Recomienda el uso de
-                        vehículo 4x4.
-                    </li>
-                    <li>Algunas rutas populares dentro del parque incluyen senderos como “Los Helechos”, “Sendero
-                        Marta”, “Las Ranas”, “Cuerpo de Paz”, entre otros</li>
-                </ul>
-                </p>
-            </div>
-            <img src="img/ParqueOmar.jpeg" alt="Senderismo" class="side-img2">
-        </div>
-
-        <!--Informacion 3-->
-        <div class="contenedor-3">
-            <div class="informacion-p left">
-                <h2>Actividades y Recomendaciones</h2>
-                <p>
-                    El parque Nacional Omar Torrijos es uno de los destinos naturales más importantes de Coclé. Ideal
-                    para los amantes de la naturaleza, aventuras y la tranquilidad.
-                <ul>
-                    <li>1. Senderismo</li>
-                    <p>Es una de las actividades principales del paque. Cuenta con rutas de todos los niveles.</p>
-                    <ul>
-                        <li>Sendero Los Helechos: recorrido corto entre bosques humedo tropical.</li>
-                        <li>Sendero Las Ranas: Famoso por la rana dorada y otras especies.</li>
-                        <li>Sendero Cuerpo de Paz: sendero natural traquilo con buenda observación de aves.</li>
-                    </ul>
-                    <li>2. Fotografiar la naturaleza </li>
-                    <p>El parque excelente para capturar</p>
-                    <ul>
-                        <li>Paisajes montañosos.</li>
-                        <li>Bosques profundos.</li>
-                        <li>Aves, reptiles y mamiferos.</li>
-                        <li>Amaneceres y neblina entre los arboles, bien Chill</li>
-                    </ul>
-                    <li>3. Aventuras y exploración</li>
-                    <p>El acceso al parque ya es parte de una experiencia: <br> La carretera final suele ser terracería, ideal para quines disfrutan conducir a zonas
-                    montañosas naturales.</p>
-                    <li>4. Miradores Naturales</li>
-                    <p>Varios puntos del parque ofrecen vistas panorámicas hacia la montañas, rios, valles. <br> Los picos más conocidos dentro del parque son: </p>
-                    <ul>
-                        <li>Cerro Peña Blanca</li>
-                        <li>Cerro Marta.</li>
-                        <li>Cascadas</li>
-                    </ul>
-                    <li>5. Picnos y tiempo en la naturaleza</li>
-                    <ul>
-                        <li>Descanzar.</li>
-                        <li>Hacer picnics.</li>
-                        <li>Disfrutar del clima fresco.</li>
-                        <li>Disfrutar en familia</li>
-                    </ul>
-                    <li>6. Senderismo dificultoso</li>
-                    <p>Actividad requiere buenas condiciones físicas. Se aplica a los caminos que podrían ser peligrosos en algunas partes y deben ser recorridos
-                        con cuidado. Rutas podrían pasar por zonas en mal estado o donde no existe un sendero marcado, o cuando el terreno está muy inclinado y requiere cierta habilidad para negociar.</p>
-                </ul>
-                </p>
-            </div>
-            <div class="galeria">
-                <img src="img/Actividad1.png" alt="Actividades" class="side-img2">
-                <img src="img/Actividad2.jpg" alt="Actividades" class="side-img2">
-                <img src="img/Actividad3.jpg" alt="Actividades" class="side-img2">
-                <img src="img/Actividad4.jpg" alt="Actividades" class="side-img2">
-            </div>
-        </div>
-    </div>
-    
-    <!-- Botón destacado a Paquetes -->
-    <div class="boton-paquetes-container">
-        <a href="PaquetesParque.html" class="btn-paquetes">Ver Paquetes Parque Omar</a>
+        <img src="img/ParqueOmarS.jpg" class="side-img">
     </div>
 
-    <!-- Footer -->
+
+    <!-- BLOQUE 2 (reverse) -->
+    <div class="bloque-info reverse">
+        <div class="informacion-p">
+            <h2>Información y ubicación</h2>
+
+            <p><b>📌 Ubicación</b></p>
+            <ul>
+                <li>Provincia de Coclé, cordillera Central</li>
+                <li>Incluye zonas como Peña Blanca y Cerro Marta</li>
+                <li>Acceso por El Copé (se recomienda 4x4)</li>
+            </ul>
+
+            <p><b>🌿 Biodiversidad</b></p>
+            <p>
+                Más de 2,604 especies de plantas y 552 especies de vertebrados.
+                Ideal para observación de aves, mamíferos y reptiles.
+            </p>
+
+            <p><b>🏕 Cómo llegar</b></p>
+            <ul>
+                <li>Interamericana → La Candelaria → El Copé → Parque</li>
+                <li>Senderos famosos: Helechos, Ranas, Cuerpo de Paz</li>
+            </ul>
+        </div>
+
+        <img src="img/ParqueOmar.jpeg" class="side-img2">
+    </div>
+
+
+    <!-- BLOQUE 3 -->
+    <div class="bloque-info">
+        <div class="informacion-p">
+            <h2>Actividades y recomendaciones</h2>
+
+            <p>El parque es ideal para naturaleza, aventura y tranquilidad.</p>
+
+            <ul>
+                <li><b>Senderismo</b></li>
+                <ul>
+                    <li>Sendero Los Helechos</li>
+                    <li>Sendero Las Ranas</li>
+                    <li>Sendero Cuerpo de Paz</li>
+                </ul>
+
+                <li><b>Fotografía</b></li>
+                <ul>
+                    <li>Paisajes montañosos</li>
+                    <li>Bosques profundos</li>
+                    <li>Aves, reptiles y mamíferos</li>
+                </ul>
+
+                <li><b>Miradores naturales</b></li>
+                <ul>
+                    <li>Cerro Peña Blanca</li>
+                    <li>Cerro Marta</li>
+                    <li>Cascadas</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="galeria">
+            <img src="img/Actividad1.png">
+            <img src="img/Actividad2.jpg">
+            <img src="img/Actividad3.jpg">
+            <img src="img/Actividad4.jpg">
+        </div>
+    </div>
+
+</div>
+<!-- Botón destacado -->
+<div class="boton-paquetes-container">
+    <a href="Paquetes.html" class="btn-paquetes">Ver Paquetes Parque Omar</a>
+</div>
+
+   <!-- Footer -->
   <footer class="pie-pagina">
     <div class="container footer-grid">
       <div class="col">
@@ -229,7 +203,26 @@
     <div class="container small">© <span id="year"></span> Turismo de Coclé. Todos los derechos reservados.</div>
   </footer>
 
-    <script src="Sitios.js"></script>
+  <!-- Chatbot flotante -->
+<!-- Burbuja-icono -->
+<div id="chatbot-bubble">
+    <img src="img/chatbot.png" id="chatbot-icon">
+</div>
+<!-- Ventana del chatbot -->
+<div id="chatbot-window" class="chatbot-window oculto">
+  <div class="chatbot-header">
+    Chat de Ayuda
+    <span id="chatbot-close" style="cursor:pointer; font-weight:bold;">X</span>
+  </div>
+  <div id="chatbot-messages" class="chatbot-messages"></div>
+  <div class="chatbot-input-area">
+    <input id="chatbot-input" type="text" placeholder="Escribe un mensaje...">
+    <button id="chatbot-send">Enviar</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+  <script src="chatbot.js"></script>
 </body>
 
 </html>

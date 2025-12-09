@@ -152,18 +152,6 @@
 }
 
 /* IMÁGENES INDIVIDUALES */
-.hero-1 {
-  background-image: url("img/ParqueOmar.jpeg");
-}
-
-.hero-2 {
-  background-image: url("img/PichachosOla.jpg");
-}
-
-.hero-3 {
-  background-image: url("img/SantaClaraLogo.jpg");
-}
-
 section.hero.hero-1 { background-image: url("img/ParqueOmar.jpeg") !important; }
 section.hero.hero-2 { background-image: url("img/PichachosOla.jpg") !important; }
 section.hero.hero-3 { background-image: url("img/SantaClaraLogo.jpg") !important; }
